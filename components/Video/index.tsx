@@ -13,7 +13,7 @@ const Video = () => {
     <section className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="Let's Get Your Website Up and Running"
+          title="Let&apos;s Get Your Website Up and Running"
           paragraph="Our team of expert web designers is ready to take on your project and bring your vision to life. Contact us today to get started!"
           center
           mb="80px"
@@ -58,7 +58,7 @@ const Video = () => {
       />
 
       <div className="absolute bottom-0 left-0 right-0 z-[-1]">
-        <img src="/images/video/shape.svg" alt="shape" className="w-full" />
+        {/* <img src="/images/video/shape.svg" alt="shape" className="w-full" /> */}
       </div>
     </section>
   );
