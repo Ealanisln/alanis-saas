@@ -24,17 +24,15 @@ const AboutSectionTwo = () => {
                   Bug free code
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Our bug-free code ensures optimal performance and functionality for your software applications. Trust our experienced team to deliver quality results without unexpected issues.
                 </p>
               </div>
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Premier support
+                  First world support
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt.
+                Our team is here to answer questions, address concerns, and provide solutions for a seamless experience.
                 </p>
               </div>
               <div className="mb-1">
@@ -42,8 +40,7 @@ const AboutSectionTwo = () => {
                   Next.js
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt
-                  consectetur adipiscing elit setim.
+                Next.js offers the best of both worlds, combining the benefits of server-side rendering with the flexibility of client-side rendering. It provides improved performance, SEO, and developer experience, making it the top choice for building modern web applications.
                 </p>
               </div>
             </div>

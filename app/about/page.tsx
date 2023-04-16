@@ -7,7 +7,7 @@ const AboutPage = () => {
     <>
       <Breadcrumb
         pageName="About Page"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+        description="Hi there! 👋 I'm Ealanisln, a web developer who loves creating impactful experiences on the web. 👨🏽‍💻 I really enjoy creating websites with Next.js and I'm always looking to improve my skills."
       />
       <AboutSectionOne />
       <AboutSectionTwo />

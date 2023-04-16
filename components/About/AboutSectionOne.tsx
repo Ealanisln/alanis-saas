@@ -24,8 +24,8 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="Crafted for Startup, SaaS and Business Sites."
-                paragraph="The main thrust is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables."
+                title="The best solution for static projects."
+                paragraph="Next.js: The top choice for static websites with lightning-fast performance thanks to its optimized build process, server-side rendering capabilities, and dynamic static site generation."
                 mb="44px"
               />
 
@@ -41,9 +41,9 @@ const AboutSectionOne = () => {
                   </div>
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Next.js" />
-                    <List text="Rich documentation" />
-                    <List text="Developer friendly" />
+                    <List text="Server Side Rendering" />
+                    <List text="Static site generation" />
+                    <List text="User friendly" />
                   </div>
                 </div>
               </div>

@@ -18,7 +18,7 @@ const Hero = () => {
                 Code and Stress-Free!
                 </h1>
                 <p className="mb-12 text-base font-medium !leading-relaxed text-body-color dark:text-white dark:opacity-90 sm:text-lg md:text-xl">
-                You don&apos;t need to be a coding expert to have a website that looks and works great. Our professional web design service will handle all the technical details for you, so you can focus on your business.
+                Introducing the ultimate solution for your static website needs - where stunning design meets affordability. We offers a diverse range of templates and designs, tailored to your unique requirements. 
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link
@@ -31,7 +31,7 @@ const Hero = () => {
                     href="#"
                     className="rounded-md bg-black/20 py-4 px-8 text-base font-semibold text-black duration-300 ease-in-out hover:bg-black/30 dark:bg-white/20 dark:text-white dark:hover:bg-white/30"
                   >
-                    View Our Portfolio
+                    View Our Plans
                   </Link>
                 </div>
               </div>

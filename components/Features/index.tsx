@@ -12,7 +12,7 @@ const Features = () => {
         <div className="container">
           <SectionTitle
             title="Main Features"
-            paragraph="Feel free to adjust the wording to fit your brand tone and voice, and highlight the specific features or benefits of your web design service that you want to emphasize."
+            paragraph="Effortlessly Create Google-Friendly Static Websites with Our Simplified Features and Enjoy Enhanced SEO Benefits. "
             center
           />
 

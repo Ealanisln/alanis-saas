@@ -8,7 +8,7 @@ const testimonialData: Testimonial[] = [
     name: "Musharof Chy",
     designation: "Founder @TailGrids",
     content:
-      "Our members are so impressed. It&apos;s intuitive. It&apos;s clean. It&apos;s distraction free. If you&apos;re building a community.",
+      "Im thrilled with the quality of service provided by this company. The team went above and beyond to ensure my project was delivered on time and to my exact specifications. I highly recommend them.",
     image: "/images/testimonials/auth-01.png",
     star: 5,
   },
@@ -17,7 +17,7 @@ const testimonialData: Testimonial[] = [
     name: "Devid Weilium",
     designation: "Founder @UIdeck",
     content:
-      "Our members are so impressed. It&apos;s intuitive. It&apos;s clean. It&apos;s distraction free. If you&apos;re building a community.",
+      "I have been a client of this company and they consistently provide exceptional products and support. Their team is knowledgeable, responsive, and always goes the extra mile.",
     image: "/images/testimonials/auth-02.png",
     star: 5,
   },
@@ -26,7 +26,7 @@ const testimonialData: Testimonial[] = [
     name: "Lethium Frenci",
     designation: "Founder @Lineicons",
     content:
-      "Our members are so impressed. It&apos;s intuitive. It&apos;s clean. It&apos;s distraction free. If you&apos;re building a community.",
+      "I recently worked with this company to build a custom website, and I couldn't be happier with the result. The team was professional, attentive, and delivered a website that exceeded my expectations.",
     image: "/images/testimonials/auth-03.png",
     star: 5,
   },
@@ -38,7 +38,7 @@ const Testimonials = () => {
       <div className="container">
         <SectionTitle
           title="What Our Users Says"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          paragraph="Hear from our satisfied clients about their experiences with our products and services. Discover why they choose us for their digital needs."
           center
         />
 
