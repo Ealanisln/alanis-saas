@@ -15,11 +15,11 @@ const Hero = () => {
                 data-wow-delay=".2s"
               >
                 <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                Code and Stress-Free!
+                Your static website, simple and affordable.
                 </h1>
-                <p className="mb-12 text-base font-medium !leading-relaxed text-body-color dark:text-white dark:opacity-90 sm:text-lg md:text-xl">
-                Introducing the ultimate solution for your static website needs - where stunning design meets affordability. We offers a diverse range of templates and designs, tailored to your unique requirements. 
-                </p>
+                <div className="mb-12 text-base font-medium !leading-relaxed text-body-color dark:text-white dark:opacity-90 sm:text-lg md:text-xl">
+                Our solution provides beautiful website templates that are customizable to fit your specific requirements. Say goodbye to generic websites and hello to an affordable online presence that stands out.
+                </div>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link
                     href="#"
