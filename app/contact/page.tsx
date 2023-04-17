@@ -1,5 +1,5 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
-import Contact, { FormProps } from "@/components/ContactTest";
+import Contact, { FormProps } from "@/components/Contact";
 
 const ContactPage = () => {
   const formProps: FormProps = {
