@@ -4,13 +4,17 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
-
+import { useSupabaseClient } from '@supabase/auth-helpers-react';
+ 
 const Header = () => {
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarToggleHandler = () => {
     setNavbarOpen(!navbarOpen);
   };
+
+  const supabaseClient = useSupabaseClient();
+
 
   // Sticky Navbar
   const [sticky, setSticky] = useState(false);
