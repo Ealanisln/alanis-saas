@@ -28,7 +28,7 @@ const Hero = () => {
                 />
                 <br/>
                 <div className="mb-12 text-base font-medium !leading-relaxed text-slate-50 dark:text-white dark:opacity-90 sm:text-lg md:text-xl">
-                Are you looking to create a personal or business website, but don't know where to begin? Look no further! We can help you create a unique and affordable website that truly represents you. 
+                Are you looking to create a personal or business website, but don&apos;t know where to begin? Look no further! We can help you create a unique and affordable website that truly represents you. 
                 </div>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link
