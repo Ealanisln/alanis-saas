@@ -15,28 +15,27 @@ export default function Layout({ children }: Props) {
         <title>Welcome to Alanis Web Design</title>
         <meta
           name="description"
-          content="Estudia con nosotros para obtener tu licencia de conducir de una manera rápida y fácil."
+          content="Are you looking to create a personal or business website, but don't know where to begin? Look no further! We can help you create a unique and affordable website that truly represents you.
+          "
         />
-        <link rel="canonical" href="https://conducir-es-facil.vercel.app/" />
+        <link rel="canonical" href="https://www.alanis.dev" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Course Landing Page" />
+        <meta property="og:title" content="Your website easy and quick." />
         <meta
           property="og:description"
-          content="Estudia con nosotros para obtener tu licencia de conducir de una manera rápida y fácil."
+          content="Are you looking to create a personal or business website, but don't know where to begin? Look no further! We can help you create a unique and affordable website that truly represents you.
+          "
         />
         <meta property="og:image" content="LINK TO THE IMAGE FILE" />
-        <meta
-          property="og:url"
-          content="https://conducir-es-facil.vercel.app/"
-        />
-        <meta property="og:site_name" content="Conducir es fácil" />
-        <meta name="twitter:title" content="Conducir es fácil" />
+        <meta property="og:url" content="https://www.alanis.dev" />
+        <meta property="og:site_name" content="Alanis Web Design" />
+        <meta name="twitter:title" content="Alanis Web Design" />
         <meta
           name="twitter:description"
-          content="Estudia con nosotros para obtener tu licencia de conducir de una manera rápida y fácil."
+          content="Are you looking to create a personal or business website, but don't know where to begin? Look no further! We can help you create a unique and affordable website that truly represents you.
+          "
         />
         <meta name="twitter:image" content="LINK TO IMAGE" />
-        <meta name="twitter:site" content="@cef" />
         <meta name="twitter:creator" content="@ealanisln" />
         <meta name="robots" content="index, follow" />
         <link rel="icon" href="/apple-icon.png" />
