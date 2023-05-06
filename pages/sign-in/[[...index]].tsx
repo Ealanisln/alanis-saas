@@ -14,7 +14,7 @@ const SignInPage = () => (
                   Login to your account for a faster checkout.
                 </p>
                   <div className="mb-8">
-                  <SignIn path="/sign-in" routing="path" signUpUrl="/sign-up" />
+                  <SignIn path="/sign-in" routing="path" signUpUrl="/sign-up" afterSignInUrl="/user"/>
                   </div>
               </div>
             </div>
