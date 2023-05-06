@@ -4,7 +4,7 @@ import Head from "next/head";
 import { ThemeProvider } from "next-themes";
 import RootLayout from "../layouts";
 import "../styles/index.css";
-import { ClerkProvider, SignIn, SignedIn, SignedOut } from "@clerk/nextjs";
+import { ClerkProvider } from "@clerk/nextjs";
 
 export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   // Create a new supabase browser client on every first render.
@@ -15,7 +15,6 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <ClerkProvider {...pageProps}>
-        <SignedIn>
           <ThemeProvider
             attribute="class"
             enableSystem={true}
@@ -25,10 +24,6 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
               <Component {...pageProps} />
             </RootLayout>
           </ThemeProvider>
-        </SignedIn>
-        <SignedOut>
-          <SignIn />
-        </SignedOut>
       </ClerkProvider>
     </>
   );

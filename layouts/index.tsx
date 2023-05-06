@@ -35,10 +35,10 @@ export default function Layout({ children }: Props) {
           content="Are you looking to create a personal or business website, but don't know where to begin? Look no further! We can help you create a unique and affordable website that truly represents you.
           "
         />
-        <meta name="twitter:image" content="LINK TO IMAGE" />
+        <meta property="og:image" content="/site.png" />
         <meta name="twitter:creator" content="@ealanisln" />
         <meta name="robots" content="index, follow" />
-        <link rel="icon" href="/apple-icon.png" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
       {children}

@@ -6,7 +6,8 @@ const Features = () => {
   return (
     <>
       <section
-        id="features"
+      key="contact"
+        id="features-1"
         className="bg-primary/[.03] py-16 md:py-20 lg:py-28"
       >
         <div className="container">
