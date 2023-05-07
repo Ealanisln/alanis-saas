@@ -17,7 +17,7 @@ const featuresData: Feature[] = [
       "All of our web designs are fully responsive and optimized for mobile devices, ensuring that your website looks and performs great on all devices.",
   },
   {
-    id: 1,
+    id: 2,
     icon: (
       <svg width="40" height="40" viewBox="0 0 40 40" className="fill-current">
         <path
@@ -32,7 +32,7 @@ const featuresData: Feature[] = [
       "Our web design service creates custom designs that are tailored to your brand, ensuring that your website stands out from the competition.",
   },
   {
-    id: 1,
+    id: 3,
     icon: (
       <svg width="40" height="40" viewBox="0 0 40 40" className="fill-current">
         <path
@@ -47,7 +47,7 @@ const featuresData: Feature[] = [
       "Our web design service allows you to create as many static pages as you need, we have different plans according to your needs. This means that you can easily expand your website as your business grows, without worrying about technical limitations.",
   },
   {
-    id: 1,
+    id: 4,
     icon: (
       <svg width="40" height="42" viewBox="0 0 40 42" className="fill-current">
         <path
@@ -62,7 +62,7 @@ const featuresData: Feature[] = [
       "We use the latest web development technologies to ensure that your website is fast, responsive, and scalable. We are proficient in using  Next.js, a powerful web development framework.",
   },
   {
-    id: 1,
+    id: 5,
     icon: (
       <svg width="40" height="40" viewBox="0 0 40 40" className="fill-current">
         <path
@@ -77,7 +77,7 @@ const featuresData: Feature[] = [
       "Unleash Your Creativity and Customize Your Website to Perfection with Our Fully Customizable Features - No Limits, No Boundaries!",
   },
   {
-    id: 1,
+    id: 6,
     icon: (
       <svg width="40" height="45" viewBox="0 0 40 45" className="fill-current">
         <path
