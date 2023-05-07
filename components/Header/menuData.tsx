@@ -13,20 +13,20 @@ const menuData: Menu[] = [
     path: "/about",
     newTab: false,
   },
-  // {
-  //   id: 33,
-  //   title: "Blog",
-  //   path: "/blog",
-  //   newTab: false,
-  // },
   {
     id: 3,
+    title: "Blog",
+    path: "/blog",
+    newTab: false,
+  },
+  {
+    id: 4,
     title: "Contact",
     path: "/contact",
     newTab: false,
   },
   {
-    id: 4,
+    id: 5,
     title: "Pages",
     newTab: false,
     submenu: [
@@ -60,18 +60,18 @@ const menuData: Menu[] = [
       //   path: "/blog-details",
       //   newTab: false,
       // },
-      // {
-      //   id: 46,
-      //   title: "Sign In Page",
-      //   path: "/signin",
-      //   newTab: false,
-      // },
-      // {
-      //   id: 47,
-      //   title: "Sign Up Page",
-      //   path: "/signup",
-      //   newTab: false,
-      // },
+      {
+        id: 46,
+        title: "Sign In Page",
+        path: "/sign-in",
+        newTab: false,
+      },
+      {
+        id: 47,
+        title: "Sign Up Page",
+        path: "/sign-up",
+        newTab: false,
+      }
       // {
       //   id: 48,
       //   title: "Error Page",
