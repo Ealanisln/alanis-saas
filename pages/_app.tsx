@@ -4,26 +4,17 @@ import Head from "next/head";
 import { ThemeProvider } from "next-themes";
 import RootLayout from "../layouts";
 import "../styles/index.css";
-import { SessionContextProvider } from "@supabase/auth-helpers-react";
-import { createBrowserSupabaseClient } from "@supabase/auth-helpers-nextjs";
-import { MyUserContextProvider } from "@/utils/useUser";
-import type { Database } from "types_db";
+import { ClerkProvider } from "@clerk/nextjs";
 
 export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
-  const [supabaseClient] = useState(() =>
-    createBrowserSupabaseClient<Database>()
-  );
-  useEffect(() => {
-    document.body.classList?.remove("loading");
-  }, []);
+  // Create a new supabase browser client on every first render.
 
   return (
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <SessionContextProvider supabaseClient={supabaseClient}>
-        <MyUserContextProvider>
+      <ClerkProvider {...pageProps}>
           <ThemeProvider
             attribute="class"
             enableSystem={true}
@@ -33,8 +24,7 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
               <Component {...pageProps} />
             </RootLayout>
           </ThemeProvider>
-        </MyUserContextProvider>
-      </SessionContextProvider>
+      </ClerkProvider>
     </>
   );
 }
