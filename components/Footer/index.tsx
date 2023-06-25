@@ -104,7 +104,7 @@ const Footer = () => {
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       {" "}
-                      Blog{" "}
+                      Portfolio{" "}
                     </Link>
                   </li>
                   <li>
