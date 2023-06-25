@@ -14,7 +14,9 @@ const SignInPage = () => (
                   Login to your account for a faster checkout.
                 </p>
                   <div className="mb-8">
+                  <div className="-mx-4 flex flex-wrap justify-center">
                   <SignUp path="/sign-up" routing="path" signInUrl="/sign-in" afterSignUpUrl="/user" />
+                  </div>
                   </div>
               </div>
             </div>
