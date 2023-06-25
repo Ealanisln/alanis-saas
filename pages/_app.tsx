@@ -4,13 +4,7 @@ import Head from "next/head";
 import { ThemeProvider } from "next-themes";
 import RootLayout from "../layouts";
 import "../styles/index.css";
-import {
-  ClerkProvider,
-  SignedIn,
-  SignedOut,
-  RedirectToSignIn,
-} from "@clerk/nextjs";
-import { SubscriptionProvider } from "use-stripe-subscription";
+import { ClerkProvider } from "@clerk/nextjs";
 
 export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   // Create a new supabase browser client on every first render.
@@ -20,26 +14,17 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <SubscriptionProvider
-        stripePublishableKey={process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}
-      >
-        <ClerkProvider>
+      <ClerkProvider {...pageProps}>
           <ThemeProvider
             attribute="class"
             enableSystem={true}
             defaultTheme="light"
           >
-            <SignedIn>
-              <RootLayout>
-                <Component {...pageProps} />
-              </RootLayout>
-            </SignedIn>
-            <SignedOut>
-              <RedirectToSignIn />
-            </SignedOut>
+            <RootLayout>
+              <Component {...pageProps} />
+            </RootLayout>
           </ThemeProvider>
-        </ClerkProvider>
-      </SubscriptionProvider>
+      </ClerkProvider>
     </>
   );
 }
