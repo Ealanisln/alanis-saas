@@ -1,5 +1,5 @@
-import SingleBlog from "@/components/Blog/SingleBlog";
-import blogData from "@/components/Blog/blogData";
+import SingleBlog from "@/components/Portfolio/SingleBlog";
+import blogData from "@/components/Portfolio/blogData";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
 const Blog = () => {
