@@ -1,5 +1,5 @@
-type Author = {
-  name: string;
+type Location = {
+  url: string;
   image: string;
   designation: string;
 };
@@ -9,7 +9,7 @@ export type Blog = {
   title: string;
   paragraph: string;
   image: string;
-  author: Author;
+  location: Location;
   tags: string[];
   publishDate: string;
 };
