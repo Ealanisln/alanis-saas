@@ -8,7 +8,7 @@ const Portfolio = () => {
       <div className="container">
         <SectionTitle
           title="Our latest jobs"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          paragraph="Discover the power of NextJS with our latest projects, where cutting-edge technology and stunning user experiences merge seamlessly."
           center
         />
 

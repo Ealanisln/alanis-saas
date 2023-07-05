@@ -37,9 +37,11 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
               </div>
               <div className="w-full">
                 <h4 className="mb-1 text-sm font-medium text-dark dark:text-white">
-                  By {location.url}
+                  URL: <h3 className="font-light"><Link href={location.url}>{location.url}</Link></h3>
                 </h4>
-                <p className="text-xs text-body-color">{location.designation}</p>
+                <p className="text-xs text-body-color">
+                  {location.designation}
+                </p>
               </div>
             </div>
             <div className="inline-block">
