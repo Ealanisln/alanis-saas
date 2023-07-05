@@ -74,6 +74,9 @@ dependencies:
   nodemailer:
     specifier: ^6.9.1
     version: 6.9.1
+  prisma:
+    specifier: ^4.14.1
+    version: 4.14.1
   react:
     specifier: 18.2.0
     version: 18.2.0
