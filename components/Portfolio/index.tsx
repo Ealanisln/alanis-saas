@@ -2,13 +2,13 @@ import SectionTitle from "../Common/SectionTitle";
 import SingleBlog from "./SingleBlog";
 import blogData from "./blogData";
 
-const Blog = () => {
+const Portfolio = () => {
   return (
     <section id="blog" className="bg-primary/5 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
-          title="Our Latest Blogs"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title="Our latest jobs"
+          paragraph="Discover the power of NextJS with our latest projects, where cutting-edge technology and stunning user experiences merge seamlessly."
           center
         />
 
@@ -24,4 +24,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default Portfolio;
