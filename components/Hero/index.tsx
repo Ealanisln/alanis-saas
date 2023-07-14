@@ -2,7 +2,13 @@ import Link from "next/link";
 import Image from "next/image";
 import ScrollLink from "../ScrollLink";
 
-const Hero = () => {
+type Props = {
+  heading: string
+  title: string
+}
+
+export default function Hero({ heading, title }: Props): JSX.Element {
+
   return (
     <>
       <section
@@ -297,5 +303,3 @@ const Hero = () => {
     </>
   );
 };
-
-export default Hero;
