@@ -10,8 +10,6 @@ import Testimonials from "@/components/Testimonials";
 import { Inter } from "@next/font/google";
 import { useTranslation, Trans } from "next-i18next";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export default function Home() {
   const { t, i18n } = useTranslation("common");
 
