@@ -1,11 +1,23 @@
+'use client'
+
+import { useCallback } from "react";
+
 const PricingBox = (props: {
-  price: string;
-  duration: string;
+  price: number;
   packageName: string;
   subtitle: string;
   children: React.ReactNode;
 }) => {
-  const { price, duration, packageName, subtitle, children } = props;
+  const { price, packageName, subtitle, children } = props;
+  const purchase = useCallback(async (price: number) => {
+    let baseUrl = "http://localhost:3000"; // Default base URL for local development
+    if (process.env.NEXT_PUBLIC_VERCEL_URL) {
+      baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL; // Use Vercel URL if available
+    }
+  
+    const { url } = await (await fetch(`/api/prepare?price=${price}`)).json();
+    window.location.href = url;
+  }, []);
 
   return (
     <div className="w-full">
@@ -16,7 +28,6 @@ const PricingBox = (props: {
         <div className="flex items-center justify-between">
           <h3 className="price mb-2 text-3xl font-bold text-black dark:text-white">
             $<span className="amount">{price}</span>
-            <span className="time text-body-color">/{duration}</span>
           </h3>
           <h4 className="mb-2 text-xl font-bold text-dark dark:text-white">
             {packageName}
@@ -24,7 +35,7 @@ const PricingBox = (props: {
         </div>
         <p className="mb-7 text-base text-body-color">{subtitle}</p>
         <div className="mb-8 border-b border-body-color border-opacity-10 pb-8 dark:border-white dark:border-opacity-10">
-          <button className="flex w-full items-center justify-center rounded-md bg-primary p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
+          <button onClick={() => purchase(price)} className="flex w-full items-center justify-center rounded-md bg-primary p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
             Get started now
           </button>
         </div>

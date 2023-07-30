@@ -1,14 +1,14 @@
-"use client";
-import { useState } from "react";
+import Link from "next/link";
 import SectionTitle from "../Common/SectionTitle";
 import OfferList from "./OfferList";
 import PricingBox from "./PricingBox";
 
-const Pricing = () => {
-  const [isMonthly, setIsMonthly] = useState(true);
-
+const PricingPlans = () => {
   return (
-    <section id="pricing-container" className="relative z-10 py-16 md:py-20 lg:py-28">
+    <section
+      id="pricing-container"
+      className="relative z-10 py-16 md:py-20 lg:py-28"
+    >
       <div className="container">
         <SectionTitle
           title="Choose the Perfect Plan for Your Needs"
@@ -17,7 +17,7 @@ const Pricing = () => {
           width="665px"
         />
 
-        <div className="w-full">
+        {/* <div className="w-full">
           <div
             className="wow fadeInUp mb-8 flex justify-center md:mb-12 lg:mb-16"
             data-wow-delay=".1s"
@@ -31,7 +31,7 @@ const Pricing = () => {
               } mr-4 cursor-pointer text-base font-semibold`}
             >
               Monthly
-            </span>
+            </span> 
             <div
               onClick={() => setIsMonthly(!isMonthly)}
               className="flex cursor-pointer items-center"
@@ -58,13 +58,12 @@ const Pricing = () => {
               Yearly
             </span>
           </div>
-        </div>
+        </div> */}
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
             packageName="Lite"
-            price={isMonthly ? "40" : "389"}
-            duration={isMonthly ? "mo" : "yr"}
+            price={389}
             subtitle="Suitable for small businesses or individuals on a budget."
           >
             <OfferList text="Hosting" status="active" />
@@ -75,8 +74,7 @@ const Pricing = () => {
           </PricingBox>
           <PricingBox
             packageName="Basic"
-            price={isMonthly ? "69" : "690"}
-            duration={isMonthly ? "mo" : "yr"}
+            price={600}
             subtitle="Designed for those who need a little more functionality but still want to keep costs down."
           >
             <OfferList text="Hosting" status="active" />
@@ -87,8 +85,7 @@ const Pricing = () => {
           </PricingBox>
           <PricingBox
             packageName="Plus"
-            price={isMonthly ? "119" : "999"}
-            duration={isMonthly ? "mo" : "yr"}
+            price={800}
             subtitle="The highest level of service and capabilities, designed for power users."
           >
             <OfferList text="Hosting" status="active" />
@@ -97,6 +94,11 @@ const Pricing = () => {
             <OfferList text="SEO Google friendly" status="active" />
             <OfferList text="50 - 100 static pages" status="active" />
           </PricingBox>
+        </div>
+        <div className="grid grid-cols-1 gap-x-8 gap-y-10">
+        <div className="text-center col-span-1 py-8">
+  <p>Note: These packages do not include hosting and domain costs. Please <Link href="/contact">Contact us</Link> if you would like to receive personalized service tailored to your specific needs.</p>
+</div>
         </div>
       </div>
 
@@ -158,4 +160,4 @@ const Pricing = () => {
   );
 };
 
-export default Pricing;
+export default PricingPlans;
