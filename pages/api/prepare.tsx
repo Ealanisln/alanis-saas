@@ -80,7 +80,7 @@ export default async function handler(
                 price_data: {
                     currency: "USD",
                     product_data: {
-                        name: "GrowChief",
+                        name: "Alanis Web Dev",
                         description: `Charging you`,
                     },
                     unit_amount: 100 * +req.query.price,

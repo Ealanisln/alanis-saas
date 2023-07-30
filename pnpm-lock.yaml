@@ -8,7 +8,6 @@ dependencies:
   '@clerk/nextjs':
     specifier: ^4.18.0
     version: 4.21.14(next@13.4.1)(react-dom@18.2.0)(react@18.2.0)
-    version: 4.21.14(next@13.4.1)(react-dom@18.2.0)(react@18.2.0)
   '@next/font':
     specifier: 13.1.6
     version: 13.1.6
@@ -35,10 +34,11 @@ dependencies:
     version: 0.1.6(@supabase/supabase-js@2.26.0)
   '@supabase/supabase-js':
     specifier: ^2.22.0
-    version: 2.22.0
+    version: 2.26.0
   '@types/nodemailer':
     specifier: ^6.4.7
     version: 6.4.7
+  '@vercel/og':
     specifier: ^0.5.4
     version: 0.5.4
   axios:
@@ -73,7 +73,10 @@ dependencies:
     version: 13.4.1(react-dom@18.2.0)(react@18.2.0)
   next-auth:
     specifier: ^4.22.1
-    version: 4.22.1(next@13.4.1)(nodemailer@6.9.2)(react-dom@18.2.0)(react@18.2.0)
+    version: 4.22.1(next@13.4.1)(nodemailer@6.9.3)(react-dom@18.2.0)(react@18.2.0)
+  next-i18next:
+    specifier: ^14.0.0
+    version: 14.0.0(i18next@23.2.8)(next@13.4.1)(react-i18next@13.0.1)(react@18.2.0)
   next-router-mock:
     specifier: ^0.9.3
     version: 0.9.3(next@13.4.1)(react@18.2.0)
@@ -81,8 +84,8 @@ dependencies:
     specifier: ^0.2.1
     version: 0.2.1(next@13.4.1)(react-dom@18.2.0)(react@18.2.0)
   nodemailer:
-    specifier: ^6.9.1
-    version: 6.9.1
+    specifier: ^6.9.2
+    version: 6.9.3
   prisma:
     specifier: ^4.14.1
     version: 4.14.1
@@ -129,7 +132,7 @@ dependencies:
 devDependencies:
   '@types/node':
     specifier: ^18.16.9
-    version: 18.16.9
+    version: 18.16.19
   '@types/react':
     specifier: ^18.2.6
     version: 18.2.6
@@ -145,9 +148,9 @@ devDependencies:
   prettier-plugin-tailwindcss:
     specifier: ^0.2.8
     version: 0.2.8(prettier@2.8.8)
-  supabase:
-    specifier: ^1.60.1
-    version: 1.60.1
+  stripe-event-types:
+    specifier: ^2.3.0
+    version: 2.3.0(stripe@12.12.0)
   tailwindcss:
     specifier: ^3.3.2
     version: 3.3.2
@@ -169,11 +172,18 @@ packages:
       regenerator-runtime: 0.13.11
     dev: false
 
-  /@clerk/backend@0.19.0:
-    resolution: {integrity: sha512-vmRQ+7Dxq2xnXGPEf+b5yt7Wy2pOWIti61iSXUpPfTFJGPwNJjDv42kJKQTJu7zuzUKsH2Y4yWn8UN9N+0C7zw==}
+  /@babel/runtime@7.22.6:
+    resolution: {integrity: sha512-wDb5pWm4WDdF6LFUde3Jl8WzPA+3ZbxYqkC6xAXuD3irdEHN1k0NfTRrJD8ZD378SJ61miMLCqIOXYhd8x+AJQ==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      regenerator-runtime: 0.13.11
+    dev: false
+
+  /@clerk/backend@0.24.0:
+    resolution: {integrity: sha512-An1VKCFlFTROUYuELDwY5B6FmbVmIDuW837t0JfgbOLBYo1yoUgXZHB/wttGISaHt+CiOs1+CAI2U3iHxkaxhA==}
     engines: {node: '>=14'}
     dependencies:
-      '@clerk/types': 3.37.0
+      '@clerk/types': 3.46.1
       '@peculiar/webcrypto': 1.4.1
       '@types/node': 16.18.6
       deepmerge: 4.2.2
@@ -182,25 +192,25 @@ packages:
       tslib: 2.4.1
     dev: false
 
-  /@clerk/clerk-react@4.16.0(react@18.2.0):
-    resolution: {integrity: sha512-cqVMwGXX4slQWswG1HLESCiuDdCUm1AMa4D8OYOnsPv+ZL3UHxepk8fFQKNhGm5m+PI8oGtfO3T3rWdQaKHrmw==}
+  /@clerk/clerk-react@4.22.0(react@18.2.0):
+    resolution: {integrity: sha512-vtGOszKYpDdV3cFtiG24jf1UdFGrXIfIzTyjh3aHd2mXGE2dIm8m04X3+mHBDStJFpJNzim8f+7HMLVeMRJhkA==}
     engines: {node: '>=14'}
     peerDependencies:
       react: '>=16'
     dependencies:
-      '@clerk/shared': 0.16.0(react@18.2.0)
-      '@clerk/types': 3.37.0
+      '@clerk/shared': 0.19.1(react@18.2.0)
+      '@clerk/types': 3.46.1
       react: 18.2.0
       swr: 1.3.0(react@18.2.0)
       tslib: 2.4.1
     dev: false
 
-  /@clerk/clerk-sdk-node@4.9.0:
-    resolution: {integrity: sha512-QkP6vA2okgRm5Onh7ZYLzxeZB9zJ648Ej5Yi8yEOYClpybEWSphstQBv7IJ8U3T1ZdXkOGqRAKNrP1qN17JW9A==}
+  /@clerk/clerk-sdk-node@4.10.15:
+    resolution: {integrity: sha512-fif8iwedLDFgllPLx8xwxA66ICbp7KjsSULqb8mcKXHPnZ/xL17eZSx4puHg4CEGBmOxY6IL5nbRj1+s+TfgqQ==}
     engines: {node: '>=14'}
     dependencies:
-      '@clerk/backend': 0.19.0
-      '@clerk/types': 3.37.0
+      '@clerk/backend': 0.24.0
+      '@clerk/types': 3.46.1
       '@types/cookies': 0.7.7
       '@types/express': 4.17.14
       '@types/node-fetch': 2.6.2
@@ -210,18 +220,18 @@ packages:
       tslib: 2.4.1
     dev: false
 
-  /@clerk/nextjs@4.18.0(next@13.4.1)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-SJEgYsBLb8E5m45WHEZcnEdXUJPriQKcu5vwijcACG6Hx9amyaCvdJiFuhZ9BF2O+5ZuJXau/V2Qur+kuzzM1g==}
+  /@clerk/nextjs@4.21.14(next@13.4.1)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-r+s9EKG0CPPj31p6UZmxPQ2A3+JVE70PmBYiC/pRrF3Oo57pYJGVmBB+eUWVYaYJNcJxhYoYb/QLsL8Xl0dUVQ==}
     engines: {node: '>=14'}
     peerDependencies:
       next: '>=10'
       react: ^17.0.2 || ^18.0.0-0
       react-dom: ^17.0.2 || ^18.0.0-0
     dependencies:
-      '@clerk/backend': 0.19.0
-      '@clerk/clerk-react': 4.16.0(react@18.2.0)
-      '@clerk/clerk-sdk-node': 4.9.0
-      '@clerk/types': 3.37.0
+      '@clerk/backend': 0.24.0
+      '@clerk/clerk-react': 4.22.0(react@18.2.0)
+      '@clerk/clerk-sdk-node': 4.10.15
+      '@clerk/types': 3.46.1
       next: 13.4.1(react-dom@18.2.0)(react@18.2.0)
       path-to-regexp: 6.2.1
       react: 18.2.0
@@ -229,18 +239,19 @@ packages:
       tslib: 2.4.1
     dev: false
 
-  /@clerk/shared@0.16.0(react@18.2.0):
-    resolution: {integrity: sha512-p3GKUUFfCHuCApEhTKyIcz044CN2jDezKI6EdCf0h75hGIn0KLkyex3MdkssYn6Hldonlvj7a8SS+jnfjdEMlw==}
+  /@clerk/shared@0.19.1(react@18.2.0):
+    resolution: {integrity: sha512-5RwASoff6CPgHcrM3kuvgUwp9qQa02zkjUdV8lNzQYEhojz6dfahLv3xZW3MS1UqDOIGrbrPviqi9pBmjpNKPA==}
     peerDependencies:
       react: '>=16'
     dependencies:
       glob-to-regexp: 0.4.1
+      js-cookie: 3.0.1
       react: 18.2.0
       swr: 1.3.0(react@18.2.0)
     dev: false
 
-  /@clerk/types@3.37.0:
-    resolution: {integrity: sha512-/L10AyFBgRPcbyLzHpw13MksZ77911tC8glSUbMbQptCSK38vUDAzI29p4ZKH8U/FIdJdXNA40j+DB8XbHixsw==}
+  /@clerk/types@3.46.1:
+    resolution: {integrity: sha512-IA/iSXJJZym4Z6f9OcT9OJayK2opVhxUVJky15aY4iVsJCPScgApBuuzC7N4vfXwA6RI/wGebFbvmsEQ3oI/UA==}
     engines: {node: '>=14'}
     dependencies:
       csstype: 3.1.1
@@ -521,76 +532,76 @@ packages:
     resolution: {integrity: sha512-Gfkvwk9o9kE9r9XNBmJRfV8zONvXThnm1tcuojL04Uy5uRyqg93DC83lDebl0rocZCfKSjUv+fWYtMQmEDJldg==}
     dev: false
 
-  /@stripe/react-stripe-js@2.1.0(@stripe/stripe-js@1.53.0)(react-dom@18.2.0)(react@18.2.0):
+  /@stripe/react-stripe-js@2.1.0(@stripe/stripe-js@1.54.1)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-Zb6Ycrj5QuhYkvtlvvLzo+cysUyA6wkx3zWHQ7uVnHRYRM/n1jtQD6VGBrdmptC8e8PJN6L091gBCyB5P0FqmA==}
     peerDependencies:
       '@stripe/stripe-js': ^1.44.1
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      '@stripe/stripe-js': 1.53.0
+      '@stripe/stripe-js': 1.54.1
       prop-types: 15.8.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /@stripe/stripe-js@1.53.0:
-    resolution: {integrity: sha512-qhhAa5WxlgVqh1J41ppyqqQVu6S1T1Q9lDAk2Ho9eI/GjrkMvAHcJpKqhekJRsZ1vjsK4P68PYOcXBXPyNCpnQ==}
+  /@stripe/stripe-js@1.54.1:
+    resolution: {integrity: sha512-smEXPu1GKMcAj9g2luT16+oXfg2jAwyc68t2Dm5wdtYl3p8PqQaZEiI8tQmboaQAjgF8pIGma6byz1T1vgmpbA==}
     dev: false
 
-  /@supabase/auth-helpers-nextjs@0.6.1(@supabase/supabase-js@2.22.0):
+  /@supabase/auth-helpers-nextjs@0.6.1(@supabase/supabase-js@2.26.0):
     resolution: {integrity: sha512-ffDAR4pW2Cosj/CuuGRAhzOFfHtqzdgax7zqRGGyq334gxxPplsmJFGaLPRJ3Z/4mTSIJHyFd6LYdHMN0a+5Bw==}
     peerDependencies:
       '@supabase/supabase-js': ^2.0.4
     dependencies:
-      '@supabase/auth-helpers-shared': 0.3.4(@supabase/supabase-js@2.22.0)
-      '@supabase/supabase-js': 2.22.0
+      '@supabase/auth-helpers-shared': 0.3.4(@supabase/supabase-js@2.26.0)
+      '@supabase/supabase-js': 2.26.0
     dev: false
 
-  /@supabase/auth-helpers-react@0.3.1(@supabase/supabase-js@2.22.0):
+  /@supabase/auth-helpers-react@0.3.1(@supabase/supabase-js@2.26.0):
     resolution: {integrity: sha512-g3SFv08Dz9FapNif/ZY1b7qKGlMJDyTLSayHBz3kb3FuYxg7aLWgQtydDhm5AGbc0XtvpIBuhGTIOVevwpdosA==}
     peerDependencies:
       '@supabase/supabase-js': ^2.0.4
     dependencies:
-      '@supabase/supabase-js': 2.22.0
+      '@supabase/supabase-js': 2.26.0
     dev: false
 
-  /@supabase/auth-helpers-shared@0.3.4(@supabase/supabase-js@2.22.0):
+  /@supabase/auth-helpers-shared@0.3.4(@supabase/supabase-js@2.26.0):
     resolution: {integrity: sha512-8I3D0SPHHexkFTSfPg0nZgJSVazWoB3tZDpT6IjRv6w89vDMUzO99Lit4H9anVLF4teW8c/nJJxawDNbDlgbgg==}
     peerDependencies:
       '@supabase/supabase-js': ^2.0.4
     dependencies:
-      '@supabase/supabase-js': 2.22.0
+      '@supabase/supabase-js': 2.26.0
       jose: 4.14.4
     dev: false
 
-  /@supabase/auth-ui-react@0.3.6(@supabase/supabase-js@2.22.0):
+  /@supabase/auth-ui-react@0.3.6(@supabase/supabase-js@2.26.0):
     resolution: {integrity: sha512-xQjLV5VmuZdy0bTLmO2i7vvDzKV5q66W1ZKhgSl867AMuMK47uEiyBCOynce5wjCatwUwk4n6IL+z67dhc+kpw==}
     peerDependencies:
       '@supabase/supabase-js': ^2.8.0
     dependencies:
       '@stitches/core': 1.2.8
-      '@supabase/auth-ui-shared': 0.1.4(@supabase/supabase-js@2.22.0)
-      '@supabase/supabase-js': 2.22.0
+      '@supabase/auth-ui-shared': 0.1.4(@supabase/supabase-js@2.26.0)
+      '@supabase/supabase-js': 2.26.0
       prop-types: 15.8.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /@supabase/auth-ui-shared@0.1.4(@supabase/supabase-js@2.22.0):
+  /@supabase/auth-ui-shared@0.1.4(@supabase/supabase-js@2.26.0):
     resolution: {integrity: sha512-1kSo4JNLyVsTdHhuHSG0WQ7VotKbeMmoQjzIwbE/heALm9xlDu+0AgTPCx1uae1umOALa1CCQuEdfvz6P02RLA==}
     peerDependencies:
       '@supabase/supabase-js': ^2.8.0
     dependencies:
-      '@supabase/supabase-js': 2.22.0
+      '@supabase/supabase-js': 2.26.0
     dev: false
 
-  /@supabase/auth-ui-shared@0.1.6(@supabase/supabase-js@2.22.0):
+  /@supabase/auth-ui-shared@0.1.6(@supabase/supabase-js@2.26.0):
     resolution: {integrity: sha512-dBlP2XR5KSSCBMgkWJMkc2UVA21V5AobKmekwIiHVvyVtzAiFqE5XWJiPV+kMlnRLzFXDeA0Z/CqdKTL/Kbs4A==}
     peerDependencies:
       '@supabase/supabase-js': ^2.21.0
     dependencies:
-      '@supabase/supabase-js': 2.22.0
+      '@supabase/supabase-js': 2.26.0
     dev: false
 
   /@supabase/functions-js@2.1.1:
@@ -601,16 +612,16 @@ packages:
       - encoding
     dev: false
 
-  /@supabase/gotrue-js@2.26.0:
-    resolution: {integrity: sha512-orxz8nwaF5D1nY/9H5xxTfFSCTvYeDLx24UO/Mxsx83xFP0t5RNxQZ0lEHBOhHhXJ4vR/COv79AxoWCOTu/7Rg==}
+  /@supabase/gotrue-js@2.39.1:
+    resolution: {integrity: sha512-qRz9mBleA/QATGKOdMAUjpn+YcbZJrTHyWQCe2hAFqJo15JIe1XziD1ZeFraRpsXwja+vONslGeynGv7H8ZZeQ==}
     dependencies:
       cross-fetch: 3.1.5
     transitivePeerDependencies:
       - encoding
     dev: false
 
-  /@supabase/postgrest-js@1.6.1:
-    resolution: {integrity: sha512-WDBUPOCOwcZonaCwEodwdA8hwWYOiXroDF9vWGxZxKAnuSVE2Ieci/kvhR4EsWvgGST2h90LRowgO+msXe8+fA==}
+  /@supabase/postgrest-js@1.7.2:
+    resolution: {integrity: sha512-GK80JpRq8l6Qll85erICypAfQCied8tdlXfsDN14W844HqXCSOisk8AaE01DAwGJanieaoN5fuqhzA2yKxDvEQ==}
     dependencies:
       cross-fetch: 3.1.5
     transitivePeerDependencies:
@@ -635,13 +646,13 @@ packages:
       - encoding
     dev: false
 
-  /@supabase/supabase-js@2.22.0:
-    resolution: {integrity: sha512-omkgSWL1HwnpXZZy+yshFLx/qqxwk9kx9jbRM6IHNEylKrH/sz6JX7rGyIOmN9niDxMRjsCu1nwuBhD6IiF2xg==}
+  /@supabase/supabase-js@2.26.0:
+    resolution: {integrity: sha512-RXmTPTobaYAwkSobadHZmEVLmzX3SGrtRZIGfLWnLv92VzBRrjuXn0a+bJqKl50GUzsyqPA+j5pod7EwMkcH5A==}
     dependencies:
       '@supabase/functions-js': 2.1.1
-      '@supabase/gotrue-js': 2.26.0
-      '@supabase/postgrest-js': 1.6.1
-      '@supabase/realtime-js': 2.7.2
+      '@supabase/gotrue-js': 2.39.1
+      '@supabase/postgrest-js': 1.7.2
+      '@supabase/realtime-js': 2.7.3
       '@supabase/storage-js': 2.5.1
       cross-fetch: 3.1.5
     transitivePeerDependencies:
@@ -659,13 +670,13 @@ packages:
     resolution: {integrity: sha512-ALYone6pm6QmwZoAgeyNksccT9Q4AWZQ6PvfwR37GT6r6FWUPguq6sUmNGSMV2Wr761oQoBxwGGa6DR5o1DC9g==}
     dependencies:
       '@types/connect': 3.4.35
-      '@types/node': 18.16.9
+      '@types/node': 18.16.19
     dev: false
 
   /@types/connect@3.4.35:
     resolution: {integrity: sha512-cdeYyv4KWoEgpBISTxWvqYsVy444DOqehiF3fM3ne10AmJ62RSyNkUnxMJXHQWRQQX2eR94m5y1IZyDwBjV9FQ==}
     dependencies:
-      '@types/node': 18.16.9
+      '@types/node': 18.16.19
     dev: false
 
   /@types/cookies@0.7.7:
@@ -674,13 +685,13 @@ packages:
       '@types/connect': 3.4.35
       '@types/express': 4.17.14
       '@types/keygrip': 1.0.2
-      '@types/node': 18.16.9
+      '@types/node': 18.16.19
     dev: false
 
   /@types/express-serve-static-core@4.17.34:
     resolution: {integrity: sha512-fvr49XlCGoUj2Pp730AItckfjat4WNb0lb3kfrLWffd+RLeoGAMsq7UOy04PAPtoL01uKwcp6u8nhzpgpDYr3w==}
     dependencies:
-      '@types/node': 18.16.9
+      '@types/node': 18.16.19
       '@types/qs': 6.9.7
       '@types/range-parser': 1.2.4
       '@types/send': 0.17.1
@@ -721,7 +732,7 @@ packages:
   /@types/node-fetch@2.6.2:
     resolution: {integrity: sha512-DHqhlq5jeESLy19TYhLakJ07kNumXWjcDdxXsLUMJZ6ue8VZJj4kLPQVE/2mdHh3xZziNF1xppu5lwmS53HR+A==}
     dependencies:
-      '@types/node': 18.16.9
+      '@types/node': 18.16.19
       form-data: 3.0.1
     dev: false
 
@@ -729,13 +740,13 @@ packages:
     resolution: {integrity: sha512-vmYJF0REqDyyU0gviezF/KHq/fYaUbFhkcNbQCuPGFQj6VTbXuHZoxs/Y7mutWe73C8AC6l9fFu8mSYiBAqkGA==}
     dev: false
 
-  /@types/node@18.16.9:
-    resolution: {integrity: sha512-IeB32oIV4oGArLrd7znD2rkHQ6EDCM+2Sr76dJnrHwv9OHBTTM6nuDLK9bmikXzPa0ZlWMWtRGo/Uw4mrzQedA==}
+  /@types/node@18.16.19:
+    resolution: {integrity: sha512-IXl7o+R9iti9eBW4Wg2hx1xQDig183jj7YLn8F7udNceyfkbn1ZxmzZXuak20gR40D7pIkIY1kYGx5VIGbaHKA==}
 
   /@types/nodemailer@6.4.7:
     resolution: {integrity: sha512-f5qCBGAn/f0qtRcd4SEn88c8Fp3Swct1731X4ryPKqS61/A3LmmzN8zaEz7hneJvpjFbUUgY7lru/B/7ODTazg==}
     dependencies:
-      '@types/node': 18.16.9
+      '@types/node': 18.16.19
     dev: false
 
   /@types/phoenix@1.5.6:
@@ -767,20 +778,20 @@ packages:
     resolution: {integrity: sha512-Cwo8LE/0rnvX7kIIa3QHCkcuF21c05Ayb0ZfxPiv0W8VRiZiNW/WuRupHKpqqGVGf7SUA44QSOUKaEd9lIrd/Q==}
     dependencies:
       '@types/mime': 1.3.2
-      '@types/node': 18.16.9
+      '@types/node': 18.16.19
     dev: false
 
   /@types/serve-static@1.15.1:
     resolution: {integrity: sha512-NUo5XNiAdULrJENtJXZZ3fHtfMolzZwczzBbnAeBbqBwG+LaG6YaJtuwzwGSQZ2wsCrxjEhNNjAkKigy3n8teQ==}
     dependencies:
       '@types/mime': 3.0.1
-      '@types/node': 18.16.9
+      '@types/node': 18.16.19
     dev: false
 
   /@types/websocket@1.0.5:
     resolution: {integrity: sha512-NbsqiNX9CnEfC1Z0Vf4mE1SgAJ07JnRYcNex7AJ9zAVzmiGHmjKFEk7O4TJIsgv2B1sLEb6owKFZrACwdYngsQ==}
     dependencies:
-      '@types/node': 18.16.9
+      '@types/node': 18.16.19
     dev: false
 
   /@typescript-eslint/parser@5.59.2(eslint@8.33.0)(typescript@5.0.4):
@@ -1157,8 +1168,7 @@ packages:
     resolution: {integrity: sha512-7O+FbCihrB5WGbFYesctwmTKae6rOiIzmz1icreWJ+0aA7LJfuqhEso2T9ncpcFtzMQtzXf2QGGueWJGTYsqrA==}
     dependencies:
       function-bind: 1.1.1
-      get-intrinsic: 1.2.1
-    dev: false
+      get-intrinsic: 1.2.0
 
   /callsites@3.1.0:
     resolution: {integrity: sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==}
@@ -1217,10 +1227,6 @@ packages:
   /chownr@2.0.0:
     resolution: {integrity: sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==}
     engines: {node: '>=10'}
-    dev: false
-
-  /classnames@2.3.2:
-    resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==}
     dev: false
 
   /classnames@2.3.2:
@@ -1288,8 +1294,13 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
-  /cross-fetch@3.1.6:
-    resolution: {integrity: sha512-riRvo06crlE8HiqOwIpQhxwdOk4fOeR7FVM/wXoxchFEqMNUjvbs3bfo4OTgMEMHzppd4DxFBDbyySj8Cv781g==}
+  /core-js@3.31.1:
+    resolution: {integrity: sha512-2sKLtfq1eFST7l7v62zaqXacPc7uG8ZAya8ogijLhTtaKNcpzpB4TMoTw2Si+8GYKRwFPMMtUT0263QFWFfqyQ==}
+    requiresBuild: true
+    dev: false
+
+  /cross-fetch@3.1.5:
+    resolution: {integrity: sha512-lvb1SBsI0Z7GDwmuid+mU3kWVBwTVUbe7S0H52yaaAdQOXq2YktTCZdlAcNKFzE6QtRz0snpw9bNiPeOIkkQvw==}
     dependencies:
       node-fetch: 2.6.7
     transitivePeerDependencies:
@@ -2949,7 +2960,7 @@ packages:
     engines: {node: '>= 0.6'}
     dev: false
 
-  /next-auth@4.22.1(next@13.4.1)(nodemailer@6.9.2)(react-dom@18.2.0)(react@18.2.0):
+  /next-auth@4.22.1(next@13.4.1)(nodemailer@6.9.3)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-NTR3f6W7/AWXKw8GSsgSyQcDW6jkslZLH8AiZa5PQ09w1kR8uHtR9rez/E9gAq/o17+p0JYHE8QjF3RoniiObA==}
     peerDependencies:
       next: ^12.2.5 || ^13
@@ -2965,7 +2976,7 @@ packages:
       cookie: 0.5.0
       jose: 4.14.4
       next: 13.4.1(react-dom@18.2.0)(react@18.2.0)
-      nodemailer: 6.9.2
+      nodemailer: 6.9.3
       oauth: 0.9.15
       openid-client: 5.4.2
       preact: 10.13.2
@@ -3112,8 +3123,8 @@ packages:
     resolution: {integrity: sha512-5GFldHPXVG/YZmFzJvKK2zDSzPKhEp0+ZR5SVaoSag9fsL5YgHbUHDfnG5494ISANDcK4KwPXAx2xqVEydmd7w==}
     dev: true
 
-  /nodemailer@6.9.2:
-    resolution: {integrity: sha512-4+TYaa/e1nIxQfyw/WzNPYTEZ5OvHIDEnmjs4LPmIfccPQN+2CYKmGHjWixn/chzD3bmUTu5FMfpltizMxqzdg==}
+  /nodemailer@6.9.3:
+    resolution: {integrity: sha512-fy9v3NgTzBngrMFkDsKEj0r02U7jm6XfC3b52eoNV+GCrGj+s8pt5OqhiJdWKuw51zCTdiNR/IUD1z33LIIGpg==}
     engines: {node: '>=6.0.0'}
     dev: false
 
@@ -3590,7 +3601,6 @@ packages:
     engines: {node: '>=0.6'}
     dependencies:
       side-channel: 1.0.4
-    dev: false
 
   /querystringify@2.2.0:
     resolution: {integrity: sha512-FIqgj2EUvTa7R50u0rGsyTftzjYmv/a3hO345bZNrqabNqjtgiDMgmo4mkUjd+nzU5oF3dClKqFIPUKybUyqoQ==}
@@ -4049,8 +4059,8 @@ packages:
     resolution: {integrity: sha512-Dn8K+jSoQcXjxCobRI4HXUdHjOXsiF/KszK49fJnkbeCFjZ3EZxLG2JiM/CX+Hcq27NBDtv/Sxhvy+HhTmvyaQ==}
     engines: {node: ^8.1 || >=10.*}
     dependencies:
-      '@types/node': 18.16.9
-      qs: 6.11.2
+      '@types/node': 18.16.19
+      qs: 6.11.1
     dev: false
 
   /styled-jsx@5.1.1(react@18.2.0):
@@ -4409,7 +4419,7 @@ packages:
     peerDependencies:
       react: '>=16'
     dependencies:
-      '@stripe/stripe-js': 1.53.0
+      '@stripe/stripe-js': 1.54.1
       react: 18.2.0
       stripe: 9.16.0
       swr: 1.3.0(react@18.2.0)

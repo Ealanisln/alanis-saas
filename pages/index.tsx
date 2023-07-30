@@ -4,8 +4,8 @@ import Brands from "@/components/Brands";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
-// import Pricing from "@/components/Pricing";
-import PackagesComponent from "@/components/Pricing/Packages";
+import PricingPlans from "@/components/PricingPlans";
+// import PackagesComponent from "@/components/Pricing/Packages";
 import Testimonials from "@/components/Testimonials";
 import { Inter } from "@next/font/google";
 import { useTranslation, Trans } from "next-i18next";
@@ -22,8 +22,8 @@ export default function Home() {
       <AboutSectionOne />
       <AboutSectionTwo />
       <Testimonials />
-      <PackagesComponent />
-      {/* <Pricing /> */}
+      {/* <PackagesComponent /> */}
+      <PricingPlans />
       {/* <Blog /> */}
     </>
   );
