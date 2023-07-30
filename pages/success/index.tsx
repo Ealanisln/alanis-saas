@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useEffect, useState } from "react";
 import SectionTitle from "@/components/Common/SectionTitle";
@@ -45,15 +45,17 @@ const Success = () => {
     if (session_id) {
       Axios.get(`/api/get-session/?session_id=${session_id}`)
         .then((response) => {
-  
           // Check if customer_details exist in the response
-          if (response.data.customer_details && response.data.customer_details.name) {
+          if (
+            response.data.customer_details &&
+            response.data.customer_details.name
+          ) {
             const customerName = response.data.customer_details.name;
             setCustomerName(customerName);
           } else {
             console.log("Customer details not found in the response");
           }
-  
+
           setSessionData(response?.data ?? {});
           setSessionFetching(false);
         })
@@ -63,8 +65,6 @@ const Success = () => {
         });
     }
   }, [session_id]);
-  
-  
 
   if (isSessionFetching || sessionData === null) {
     // Handle loading state
@@ -77,9 +77,9 @@ const Success = () => {
         <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2 py-8">
-            <SectionTitle
+              <SectionTitle
                 title="Purchase was confirmed."
-                paragraph={`Hi, ${customerName}. Thank you for your recent purchase. We are honored to gain you as a customer and hope to serve you for a long time.`}
+                paragraph={`Hi, ${customerName}. Thank you for your recent purchase. We are honored to gain you as a customer and hope to serve you for a long time. These are the next steps:`}
                 mb="44px"
               />
 
