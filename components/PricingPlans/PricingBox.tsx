@@ -15,7 +15,7 @@ const PricingBox = (props: {
       baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL; // Use Vercel URL if available
     }
   
-    const { url } = await (await fetch(`${baseUrl}/api/prepare?price=${price}`)).json();
+    const { url } = await (await fetch(`/api/prepare?price=${price}`)).json();
     window.location.href = url;
   }, []);
 
