@@ -1,3 +1,5 @@
+'use client'
+
 import { useCallback } from "react";
 
 const PricingBox = (props: {
@@ -16,8 +18,7 @@ const PricingBox = (props: {
     const { url } = await (await fetch(`${baseUrl}/api/prepare?price=${price}`)).json();
     window.location.href = url;
   }, []);
-  
-    
+
   return (
     <div className="w-full">
       <div
