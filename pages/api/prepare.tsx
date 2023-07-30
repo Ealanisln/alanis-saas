@@ -1,5 +1,16 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import Stripe from 'stripe';
+import type { NextApiRequest, NextApiResponse } from "next";
+import Stripe from "stripe";
+
+// Helper function to get the base URL dynamically
+function getBaseUrl(req: NextApiRequest) {
+  if (process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL}`;
+  }
+
+  const protocol = req.headers["x-forwarded-proto"] || "http";
+  const host = req.headers["x-forwarded-host"] || req.headers.host || "localhost:3000";
+  return `${protocol}://${host}`;
+}
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {} as any);
 
