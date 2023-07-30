@@ -8,10 +8,15 @@ const PricingBox = (props: {
 }) => {
   const { price, packageName, subtitle, children } = props;
   const purchase = useCallback(async (price: number) => {
-    const { url } = await (await fetch(`http://localhost:3000/api/prepare?price=${price}`)).json();
-
+    let baseUrl = "http://localhost:3000"; // Default base URL for local development
+    if (process.env.NEXT_PUBLIC_VERCEL_URL) {
+      baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL; // Use Vercel URL if available
+    }
+  
+    const { url } = await (await fetch(`${baseUrl}/api/prepare?price=${price}`)).json();
     window.location.href = url;
   }, []);
+  
     
   return (
     <div className="w-full">
