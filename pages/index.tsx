@@ -7,7 +7,6 @@ import Hero from "@/components/Hero";
 import PricingPlans from "@/components/PricingPlans";
 // import PackagesComponent from "@/components/Pricing/Packages";
 import Testimonials from "@/components/Testimonials";
-import { Inter } from "@next/font/google";
 import { useTranslation, Trans } from "next-i18next";
 
 export default function Home() {

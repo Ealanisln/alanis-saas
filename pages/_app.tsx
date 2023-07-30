@@ -4,12 +4,7 @@ import Head from "next/head";
 import { ThemeProvider } from "next-themes";
 import RootLayout from "../layouts";
 import "../styles/index.css";
-import {
-  ClerkProvider,
-  SignedIn,
-  SignedOut,
-  RedirectToSignIn,
-} from "@clerk/nextjs";
+
 import { SubscriptionProvider } from "use-stripe-subscription";
 
 export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
@@ -23,22 +18,15 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
       <SubscriptionProvider
         stripePublishableKey={process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}
       >
-        <ClerkProvider>
-          <ThemeProvider
-            attribute="class"
-            enableSystem={true}
-            defaultTheme="light"
-          >
-            <SignedIn>
-              <RootLayout>
-                <Component {...pageProps} />
-              </RootLayout>
-            </SignedIn>
-            <SignedOut>
-              <RedirectToSignIn />
-            </SignedOut>
-          </ThemeProvider>
-        </ClerkProvider>
+        <ThemeProvider
+          attribute="class"
+          enableSystem={true}
+          defaultTheme="light"
+        >
+          <RootLayout>
+            <Component {...pageProps} />
+          </RootLayout>
+        </ThemeProvider>
       </SubscriptionProvider>
     </>
   );
