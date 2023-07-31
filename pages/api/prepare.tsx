@@ -3,8 +3,8 @@ import Stripe from "stripe";
 
 // Helper function to get the base URL dynamically
 function getBaseUrl(req: NextApiRequest) {
-  if (process.env.VERCEL_URL) {
-    return `https://${process.env.VERCEL_URL}`;
+  if (process.env.NEXT_PUBLIC_VERCEL_URL) {
+    return `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
   }
 
   const protocol = req.headers["x-forwarded-proto"] || "http";
@@ -26,10 +26,9 @@ export default async function handler(
     return res.status(400).json({ error: "Please enter a valid price" });
   }
 
-
-  const YOUR_DOMAIN = getBaseUrl(req); // Get the base URL dynamically
-
   try {
+    const YOUR_DOMAIN = getBaseUrl(req); // Get the base URL dynamically
+
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       line_items: [
