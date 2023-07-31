@@ -1,5 +1,3 @@
-"use client";
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import Stripe from "stripe";
 
@@ -10,8 +8,7 @@ function getBaseUrl(req: NextApiRequest) {
   }
 
   const protocol = req.headers["x-forwarded-proto"] || "http";
-  const host =
-    req.headers["x-forwarded-host"] || req.headers.host || "localhost:3000";
+  const host = req.headers["x-forwarded-host"] || req.headers.host || "localhost:3000";
   return `${protocol}://${host}`;
 }
 
@@ -29,9 +26,10 @@ export default async function handler(
     return res.status(400).json({ error: "Please enter a valid price" });
   }
 
-  try {
-    const YOUR_DOMAIN = getBaseUrl(req); // Get the base URL dynamically
 
+  const YOUR_DOMAIN = getBaseUrl(req); // Get the base URL dynamically
+  console.log(YOUR_DOMAIN);
+  try {
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       line_items: [
@@ -54,7 +52,7 @@ export default async function handler(
 
     return res.json({ url: session.url });
   } catch (error) {
-    console.error("Error creating checkout session:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    console.error('Error creating checkout session:', error.message);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 }
