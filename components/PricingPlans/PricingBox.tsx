@@ -10,14 +10,20 @@ const PricingBox = (props: {
 }) => {
   const { price, packageName, subtitle, children } = props;
   const purchase = useCallback(async (price: number) => {
-    let baseUrl = "http://localhost:3000"; // Default base URL for local development
-    if (process.env.NEXT_PUBLIC_VERCEL_URL) {
-      baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL; // Use Vercel URL if available
+    try {
+      const { url } = await (await fetch(`/api/prepare?price=${price}`)).json();
+
+      if (!url) {
+        throw new Error('Invalid response from the server');
+      }
+
+      window.location.href = url;
+    } catch (error) {
+      console.error('Error processing purchase:', error);
+      // Handle the error, show a message, or take other appropriate actions
     }
-  
-    const { url } = await (await fetch(`/api/prepare?price=${price}`)).json();
-    window.location.href = url;
   }, []);
+
 
   return (
     <div className="w-full">
