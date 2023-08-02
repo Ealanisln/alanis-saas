@@ -11,7 +11,7 @@ const PricingBox = (props: {
   const { price, packageName, subtitle, children } = props;
   const purchase = useCallback(async (price: number) => {
     try {
-      const { url } = await (await fetch(`/api/prepare?price=${price}`)).json();
+      const { url } = await (await fetch(`/api/checkout-prepare?price=${price}`)).json();
 
       if (!url) {
         throw new Error('Invalid response from the server');

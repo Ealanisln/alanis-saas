@@ -12,7 +12,10 @@ function getBaseUrl(req: NextApiRequest) {
   return `${protocol}://${host}`;
 }
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {} as any);
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+  // https://github.com/stripe/stripe-node#configuration
+  apiVersion: '2022-11-15',
+})
 
 export default async function handler(
   req: NextApiRequest,
@@ -26,10 +29,9 @@ export default async function handler(
     return res.status(400).json({ error: "Please enter a valid price" });
   }
 
-
-  const YOUR_DOMAIN = getBaseUrl(req); // Get the base URL dynamically
-  console.log(YOUR_DOMAIN);
   try {
+    const baseUrl = getBaseUrl(req);
+    console.log(baseUrl);
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       line_items: [
@@ -46,8 +48,8 @@ export default async function handler(
         },
       ],
       mode: "payment",
-      success_url: `${YOUR_DOMAIN}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${YOUR_DOMAIN}/cancel`,
+      success_url: `${baseUrl}/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${baseUrl}/cancel`,
     });
 
     return res.json({ url: session.url });
