@@ -6,7 +6,7 @@ import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import PricingPlans from "@/components/PricingPlans";
 // import PackagesComponent from "@/components/Pricing/Packages";
-import Testimonials from "@/components/Testimonials";
+// import Testimonials from "@/components/Testimonials";
 import { useTranslation, Trans } from "next-i18next";
 
 export default function Home() {
@@ -20,7 +20,7 @@ export default function Home() {
       <Brands />
       <AboutSectionOne />
       <AboutSectionTwo />
-      <Testimonials />
+      {/* <Testimonials /> */}
       {/* <PackagesComponent /> */}
       <PricingPlans />
       {/* <Blog /> */}

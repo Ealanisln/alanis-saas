@@ -25,6 +25,11 @@ const Header = () => {
     window.addEventListener("scroll", handleStickyNavbar);
   });
 
+    // Close the menu when a link is clicked
+    const handleLinkClick = () => {
+      setNavbarOpen(false);
+    };
+
   // submenu handler
   const [openIndex, setOpenIndex] = useState(-1);
   const handleSubmenu = (index) => {
@@ -107,6 +112,7 @@ const Header = () => {
                         {menuItem.path ? (
                           <Link
                             href={menuItem.path}
+                            onClick={handleLinkClick}
                             className={`flex py-2 text-base text-dark group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:py-6 lg:px-0`}
                           >
                             {menuItem.title}
@@ -135,6 +141,7 @@ const Header = () => {
                               {menuItem.submenu.map((submenuItem) => (
                                 <Link
                                   href={submenuItem.path}
+                                  onClick={handleLinkClick}
                                   key={submenuItem.id}
                                   className="block rounded py-2.5 text-sm text-dark hover:opacity-70 dark:text-white lg:px-3"
                                 >
