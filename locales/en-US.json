@@ -1,0 +1,105 @@
+{
+  "Hero": {
+    "title": "Home",
+    "description": "Your online presence made easy!",
+    "subtitle": "Are you looking to create a personal or business website, but don't know where to begin? Look no further! We can help you create a unique and affordable website that truly represents you.",
+    "getStartedButton": "Get started now",
+    "viewplans": "View Our Plans"
+  },
+  "Navigation": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "pricing": "Pricing",
+    "about": "About"
+  },
+  "Features": {
+    "title": "Main Features",
+    "googleFriendly": "Easily create Google-friendly static websites and enjoy improved SEO benefits, which means that Google will give you better visibility among others.",
+    "mobileFriendly": "Mobile-Friendly Designs",
+    "subMobile": "All of our web designs are fully responsive and optimized for mobile devices, ensuring that your website looks and performs great on all devices.",
+    "customDesigns": "Custom, High-Quality Designs",
+    "subCustom": "Our web design service creates custom designs that are tailored to your brand, ensuring that your website stands out from the competition.",
+    "staticPages": "Static Pages",
+    "subStatic": "Our web design service allows you to create as many static pages as you need, we have different plans according to your needs. This means that you can easily expand your website as your business grows, without worrying about technical limitations.",
+    "latestTechnologies": "Latest Technologies",
+    "subLatest": "We use the latest web development technologies to ensure that your website is fast, responsive, and scalable. We are proficient in using Next.js, a powerful web development framework.",
+    "customizable": "Fully Customizable",
+    "subCustomizable": "Unleash Your Creativity and Customize Your Website to Perfection with Our Fully Customizable Features - No Limits, No Boundaries!",
+    "seoOptimization": "SEO Optimization",
+    "subSeo": "We use advanced techniques, including Next.js optimization and keyword research, to ensure that your website ranks high in search results and attracts more organic traffic."
+  },
+  "Technologies": {
+    "vercel": "Vercel",
+    "tailwindCss": "Tailwind CSS",
+    "lineicons": "Lineicons",
+    "graygrids": "GrayGrids",
+    "tailAdmin": "TailAdmin"
+  },
+  "SectionOne": {
+    "title": "The best solution for static projects.",
+    "nextJs": "Next.js: The top choice for static websites with lightning-fast performance thanks to its optimized build process, server-side rendering capabilities, and dynamic static site generation.",
+    "premiumQuality": "Premium Quality",
+    "tailwindCSS": "Tailwind CSS",
+    "useForLifetime": "Lifetime Usage",
+    "serverSideRendering": "Server-Side Rendering",
+    "staticSiteGeneration": "Static Site Generation",
+    "userFriendly": "User-Friendly"
+  },
+  "SectionTwo": {
+    "title": "Bug-free code",
+    "description": "Our bug-free code ensures optimal performance and functionality for your software applications. Trust our experienced team to deliver quality results without unexpected issues.",
+    "firstWorldSupport": "First-world support",
+    "firstWorldDescription": "Our team is here to answer questions, address concerns, and provide solutions for a seamless experience.",
+    "descriptionNext": "Next.js offers the best of both worlds, combining the benefits of server-side rendering with the flexibility of client-side rendering. It provides improved performance, SEO, and developer experience, making it the top choice for building modern web applications."
+  },
+  "PricingPlans": {
+    "button": "Get started now",
+    "title": "Choose the Perfect Plan for Your Needs",
+    "subtitle": "Our three-tiered pricing model offers options for everyone, whether you're a small business owner or a power user.",
+    "lite": {
+      "title": "$389 Lite",
+      "description": "Suitable for small businesses or individuals on a budget."
+    },
+    "basic": {
+      "title": "$600 Basic",
+      "description": "Designed for those who need a little more functionality but still want to keep costs down."
+    },
+    "plus": {
+      "title": "$800 Plus",
+      "description": "The highest level of service and capabilities, designed for power users."
+    },
+    "specs": {
+      "hosting": "Hosting",
+      "domain": "Domain included",
+      "ssl": "SSL Certificate",
+      "seo": "Google SEO Friendly",
+      "staticlite": "1 - 10 static pages.",
+      "staticbasic": "11 - 50 static pages.",
+      "staticplus": "50 - 100 static pages."
+    },
+    "note": "Note: These packages do not include hosting and domain costs. Please contact us if you would like to receive personalized service tailored to your specific needs."
+  },
+  "Footer": {
+    "simplifyingWeb": "Simplifying the web just for you.",
+    "title": "Our website",
+    "portfolio": "Portfolio",
+    "pricing": "Pricing",
+    "about": "About",
+    "terms": "Terms",
+    "tos": "TOS",
+    "privacyPolicy": "Privacy Policy",
+    "refundPolicy": "Refund Policy",
+    "supportAndHelp": "Support & Help",
+    "openSupportTicket": "Open Support Ticket",
+    "termsOfUse": "Terms of Use",
+    "createdWithLove": "Created with ❤️ by Emmanuel Alanis. ©"
+  },
+  "LocaleSwitcher": {
+    "switchLocale": "Change to {locale, select, de {German} en {English} other {Unknown}}"
+  },
+  "Portfolio": {
+    "welcome": "Welcome to my portfolio",
+    "subtitle": "Discover my web developer portfolio gallery, showcasing captivating websites that blend creativity and technical expertise."
+  }
+}

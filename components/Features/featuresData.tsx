@@ -3,6 +3,7 @@ import { Feature } from "@/types/feature";
 const featuresData: Feature[] = [
   {
     id: 1,
+    category: "mobileFriendly",
     icon: (
       <svg width="40" height="41" viewBox="0 0 40 41" className="fill-current">
         <path
@@ -14,10 +15,11 @@ const featuresData: Feature[] = [
     ),
     title: "Mobile-Friendly Designs",
     paragraph:
-      "All of our web designs are fully responsive and optimized for mobile devices, ensuring that your website looks and performs great on all devices.",
+      "subMobile",
   },
   {
     id: 2,
+    category: "customDesigns",
     icon: (
       <svg width="40" height="40" viewBox="0 0 40 40" className="fill-current">
         <path
@@ -29,10 +31,11 @@ const featuresData: Feature[] = [
     ),
     title: "Custom, High-Quality Designs",
     paragraph:
-      "Our web design service creates custom designs that are tailored to your brand, ensuring that your website stands out from the competition.",
+      "subCustom",
   },
   {
     id: 3,
+    category: "staticPages",
     icon: (
       <svg width="40" height="40" viewBox="0 0 40 40" className="fill-current">
         <path
@@ -44,10 +47,11 @@ const featuresData: Feature[] = [
     ),
     title: "Static Pages",
     paragraph:
-      "Our web design service allows you to create as many static pages as you need, we have different plans according to your needs. This means that you can easily expand your website as your business grows, without worrying about technical limitations.",
+      "subStatic",
   },
   {
     id: 4,
+    category: "latestTechnologies",
     icon: (
       <svg width="40" height="42" viewBox="0 0 40 42" className="fill-current">
         <path
@@ -59,10 +63,11 @@ const featuresData: Feature[] = [
     ),
     title: "Latest Technologies",
     paragraph:
-      "We use the latest web development technologies to ensure that your website is fast, responsive, and scalable. We are proficient in using  Next.js, a powerful web development framework.",
+      "subLatest",
   },
   {
     id: 5,
+    category: "customizable",
     icon: (
       <svg width="40" height="40" viewBox="0 0 40 40" className="fill-current">
         <path
@@ -74,10 +79,11 @@ const featuresData: Feature[] = [
     ),
     title: "Fully Customizable",
     paragraph:
-      "Unleash Your Creativity and Customize Your Website to Perfection with Our Fully Customizable Features - No Limits, No Boundaries!",
+      "subCustomizable",
   },
   {
     id: 6,
+    category: "seoOptimization",
     icon: (
       <svg width="40" height="45" viewBox="0 0 40 45" className="fill-current">
         <path
@@ -89,7 +95,7 @@ const featuresData: Feature[] = [
     ),
     title: "SEO Optimization",
     paragraph:
-      "We use advanced techniques, including Next.js optimization and keyword research, to ensure that your website ranks high in search results and attracts more organic traffic.",
+      "subSeo",
   },
 ];
 export default featuresData;

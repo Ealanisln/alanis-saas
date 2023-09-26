@@ -2,8 +2,11 @@ import Link from "next/link";
 import SectionTitle from "../Common/SectionTitle";
 import OfferList from "./OfferList";
 import PricingBox from "./PricingBox";
+import { useTranslations } from "next-intl";
 
 const PricingPlans = () => {
+  const t = useTranslations("PricingPlans");
+
   return (
     <section
       id="pricing-container"
@@ -11,8 +14,8 @@ const PricingPlans = () => {
     >
       <div className="container">
         <SectionTitle
-          title="Choose the Perfect Plan for Your Needs"
-          paragraph="Our three-tiered pricing model offers options for everyone, whether you're a small business owner or a power user. "
+          title={t("title")}
+          paragraph={t("subtitle")}
           center
           width="665px"
         />
@@ -64,41 +67,41 @@ const PricingPlans = () => {
           <PricingBox
             packageName="Lite"
             price={389}
-            subtitle="Suitable for small businesses or individuals on a budget."
+            subtitle={t("lite.description")}
           >
-            <OfferList text="Hosting" status="active" />
-            <OfferList text="Domain included" status="active" />
-            <OfferList text="SSL Certificate" status="active" />
-            <OfferList text="SEO Google friendly" status="active" />
-            <OfferList text="1 - 10 static pages." status="active" />
+            <OfferList text={t("specs.hosting")} status="active" />
+            <OfferList text={t("specs.domain")} status="active" />
+            <OfferList text={t("specs.ssl")} status="active" />
+            <OfferList text={t("specs.seo")} status="active" />
+            <OfferList text={t("specs.staticlite")} status="active" />
           </PricingBox>
           <PricingBox
-            packageName="Basic"
+            packageName={t("basic.title")}
             price={600}
-            subtitle="Designed for those who need a little more functionality but still want to keep costs down."
+            subtitle={t("basic.description")}
           >
-            <OfferList text="Hosting" status="active" />
-            <OfferList text="Domain included" status="active" />
-            <OfferList text="SSL Certificate" status="active" />
-            <OfferList text="SEO Google friendly" status="active" />
-            <OfferList text="11 - 50 static pages." status="active" />
+            <OfferList text={t("specs.hosting")} status="active" />
+            <OfferList text={t("specs.domain")} status="active" />
+            <OfferList text={t("specs.ssl")} status="active" />
+            <OfferList text={t("specs.seo")} status="active" />
+            <OfferList text={t("specs.staticbasic")} status="active" />
           </PricingBox>
           <PricingBox
-            packageName="Plus"
+            packageName={t("plus.title")}
             price={800}
-            subtitle="The highest level of service and capabilities, designed for power users."
+            subtitle={t("plus.description")}
           >
-            <OfferList text="Hosting" status="active" />
-            <OfferList text="Domain included" status="active" />
-            <OfferList text="SSL Certificate" status="active" />
-            <OfferList text="SEO Google friendly" status="active" />
-            <OfferList text="50 - 100 static pages" status="active" />
+            <OfferList text={t("specs.hosting")} status="active" />
+            <OfferList text={t("specs.domain")} status="active" />
+            <OfferList text={t("specs.ssl")} status="active" />
+            <OfferList text={t("specs.seo")} status="active" />
+            <OfferList text={t("specs.staticplus")} status="active" />
           </PricingBox>
         </div>
         <div className="grid grid-cols-1 gap-x-8 gap-y-10">
-        <div className="text-center col-span-1 py-8">
-  <p>Note: These packages do not include hosting and domain costs. Please <Link href="/contact">Contact us</Link> if you would like to receive personalized service tailored to your specific needs.</p>
-</div>
+          <div className="text-center col-span-1 py-8">
+            <p>{t("note")}</p>
+          </div>
         </div>
       </div>
 

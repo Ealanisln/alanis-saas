@@ -1,5 +1,6 @@
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
+import { useTranslations } from 'next-intl';
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -8,6 +9,8 @@ const checkIcon = (
 );
 
 const AboutSectionOne = () => {
+  const t = useTranslations('SectionOne'); 
+
   const List = ({ text }) => (
     <p className="mb-5 flex items-center text-lg font-medium text-body-color">
       <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
@@ -24,8 +27,8 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="The best solution for static projects."
-                paragraph="Next.js: The top choice for static websites with lightning-fast performance thanks to its optimized build process, server-side rendering capabilities, and dynamic static site generation."
+                title={t("title")}
+                paragraph={t("nextJs")}
                 mb="44px"
               />
 
@@ -35,15 +38,15 @@ const AboutSectionOne = () => {
               >
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Premium quality" />
-                    <List text="Tailwind CSS" />
-                    <List text="Use for lifetime" />
+                    <List text={t("premiumQuality")} />
+                    <List text={t("tailwindCSS")} />
+                    <List text={t("useForLifetime")} />
                   </div>
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Server Side Rendering" />
-                    <List text="Static site generation" />
-                    <List text="User friendly" />
+                    <List text={t("serverSideRendering")} />
+                    <List text={t("staticSiteGeneration")} />
+                    <List text={t("userFriendly")} />
                   </div>
                 </div>
               </div>

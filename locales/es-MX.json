@@ -1,0 +1,101 @@
+{
+  "Hero": {
+    "title": "Inicio",
+    "description": "¡Facilitamos tu presencia en línea!",
+    "subtitle": "¿Estás buscando crear un sitio web personal o empresarial, pero no sabes por dónde empezar? ¡No busques más! Podemos ayudarte a crear un sitio web único y accesible que realmente te funcione.",
+    "getStartedButton": "Comienza ahora",
+    "viewplans": "Ver Nuestros Planes:"
+  },
+  "Navigation": {
+    "home": "Inicio",
+    "portfolio": "Portafolio",
+    "contact": "Contacto",
+    "pricing": "Precios",
+    "about": "Acerca de mí"
+  },
+  "Features": {
+    "title": "Principales Características",
+    "googleFriendly": "Crea fácilmente sitios web estáticos amigables con Google y disfruta de beneficios de SEO mejorados, esto quiere decir que Google te dará una mejor visibilidad respecto a los demás.",
+    "mobileFriendly": "Diseños Adaptados a Móviles",
+    "subMobile": "Todos nuestros diseños web son completamente responsivos y optimizados para dispositivos móviles, asegurando que tu sitio web se vea y funcione de manera excelente en todos los dispositivos.",
+    "customDesigns": "Diseños Personalizados de Alta Calidad",
+    "subCustom": "Nuestro servicio de diseño web crea diseños personalizados que se adaptan a tu marca, asegurando que tu sitio web se destaque entre la competencia.",
+    "staticPages": "Páginas Estáticas",
+    "subStatic": "Nuestro servicio de diseño web te permite crear tantas páginas estáticas como necesites, tenemos diferentes planes de acuerdo a tus necesidades. Esto significa que puedes expandir fácilmente tu sitio web a medida que tu negocio crece, sin preocuparte por limitaciones técnicas.",
+    "latestTechnologies": "Tecnologías de Última Generación",
+    "subLatest": "Utilizamos las últimas tecnologías de desarrollo web para garantizar que tu sitio web sea rápido, receptivo y escalable. Somos expertos en el uso de Next.js, un poderoso framework de desarrollo web.",
+    "customizable": "Totalmente Personalizable",
+    "subCustomizable": "Libera tu creatividad y personaliza tu sitio web a la perfección con nuestras características totalmente personalizables. Sin límites, sin restricciones.",
+    "seoOptimization": "Optimización SEO",
+    "subSeo": "Utilizamos técnicas avanzadas, incluyendo la optimización de Next.js y la investigación de palabras clave, para asegurarnos de que tu sitio web se posicione alto en los resultados de búsqueda y atraiga más tráfico orgánico."
+  },
+  "Technologies": {
+    "vercel": "Vercel",
+    "tailwindCss": "Tailwind CSS",
+    "lineicons": "Lineicons",
+    "graygrids": "GrayGrids",
+    "tailAdmin": "TailAdmin"
+  },
+  "SectionOne": {
+    "title": "La mejor solución para proyectos estáticos.",
+    "nextJs": "Next.js: La elección principal para sitios web estáticos con un rendimiento ultrarrápido gracias a su proceso de construcción optimizado, capacidades de representación en el lado del servidor y generación dinámica de sitios estáticos.",
+    "premiumQuality": "Calidad premium",
+    "tailwindCSS": "Tailwind CSS",
+    "useForLifetime": "Uso de por vida",
+    "serverSideRendering": "Ejecución en el lado del servidor",
+    "staticSiteGeneration": "Generación de sitios estáticos",
+    "userFriendly": "Amigable para el usuario"
+  },
+  "SectionTwo": {
+    "title": "Código Libre de Errores",
+    "description": "Nuestro código libre de errores garantiza un rendimiento y funcionalidad óptimos para tus aplicaciones de software. Confía en nuestro equipo experimentado para ofrecer resultados de calidad sin problemas inesperados.",
+    "firstWorldSupport": "Soporte de Primera Clase",
+    "firstWorldDescription": "Nuestro equipo está aquí para responder preguntas, abordar preocupaciones y ofrecer soluciones para una experiencia sin problemas.",
+    "descriptionNext": "Next.js ofrece lo mejor de ambos mundos, combinando los beneficios de la representación en el lado del servidor con la flexibilidad de la representación en el lado del cliente. Ofrece un rendimiento, SEO y experiencia de desarrollo mejorados, lo que lo convierte en la opción principal para construir aplicaciones web modernas."
+  },
+  "PricingPlans": {
+    "button": "Comienza ahora",
+    "title": "Elige el Plan Perfecto para tus Necesidades",
+    "subtitle": "Nuestro modelo de precios de tres niveles ofrece opciones para todos, ya sea que seas propietario de una pequeña empresa o un usuario avanzado.",
+    "lite": {
+      "title": "$389 Lite",
+      "description": "Adecuado para pequeñas empresas o individuos con un presupuesto limitado."
+    },
+    "basic": {
+      "title": "Básico",
+      "description": "Diseñado para aquellos que necesitan un poco más de funcionalidad pero aún desean mantener los costos bajos."
+    },
+    "plus": {
+      "title": "Plus",
+      "description": "El nivel más alto de servicio y capacidades, diseñado para usuarios avanzados."
+    },
+    "specs": {
+      "hosting": "Alojamiento",
+      "domain": "Dominio incluido",
+      "ssl": "Certificado SSL",
+      "seo": "Amigable con el SEO de Google",
+      "staticlite": "1 - 10 páginas estáticas.",
+      "staticbasic": "11 - 50 páginas estáticas.",
+      "staticplus": "50 - 100 páginas estáticas."
+    },
+    "note": "Nota: Estos paquetes no incluyen costos de alojamiento y dominio. Por favor, contáctanos para recibir un servicio personalizado adaptado a tus necesidades específicas."
+  },
+  "Footer": {
+    "simplifyingWeb": "Simplificando la web solo para ti.",
+    "title": "Nuestra web",
+    "portfolio": "Portafolio",
+    "pricing": "Precios",
+    "about": "Acerca de mí",
+    "terms": "Términos",
+    "tos": "TOS",
+    "privacyPolicy": "Política de Privacidad",
+    "refundPolicy": "Política de Reembolso",
+    "supportAndHelp": "Soporte y Ayuda",
+    "openSupportTicket": "Abrir Ticket de Soporte",
+    "termsOfUse": "Términos de Uso",
+    "createdWithLove": "Creado con ❤️ por Emmanuel Alanis. ©"
+  },
+  "LocaleSwitcher": {
+    "switchLocale": "Change to {locale, select, de {German} en {English} other {Unknown}}"
+  }
+}

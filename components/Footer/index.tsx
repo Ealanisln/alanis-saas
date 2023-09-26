@@ -1,7 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
+
 
 const Footer = () => {
+  const t = useTranslations("Footer");
+  const currentYear = new Date().getFullYear();
+
+
   return (
     <>
       <footer
@@ -29,7 +35,7 @@ const Footer = () => {
                   />
                 </Link>
                 <p className="mb-9 text-base font-medium leading-relaxed text-body-color">
-                Simplifying the web just for you. 
+                {t("simplifyingWeb")}
                 </p>
                 <div className="flex items-center">
                   <Link
@@ -95,7 +101,7 @@ const Footer = () => {
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Useful Links
+                 {t("title")}
                 </h2>
                 <ul>
                   <li>
@@ -103,8 +109,7 @@ const Footer = () => {
                       href="/"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
-                      {" "}
-                      Portfolio{" "}
+                    {t("portfolio")}
                     </Link>
                   </li>
                   <li>
@@ -112,8 +117,7 @@ const Footer = () => {
                       href="/"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
-                      {" "}
-                      Pricing{" "}
+                    {t("pricing")}
                     </Link>
                   </li>
                   <li>
@@ -121,8 +125,7 @@ const Footer = () => {
                       href="/"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
-                      {" "}
-                      About{" "}
+                    {t("about")}
                     </Link>
                   </li>
                 </ul>
@@ -132,7 +135,7 @@ const Footer = () => {
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Terms
+                {t("terms")}
                 </h2>
                 <ul>
                   <li>
@@ -140,8 +143,7 @@ const Footer = () => {
                       href="/"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
-                      {" "}
-                      TOS{" "}
+                    {t("tos")}
                     </Link>
                   </li>
                   <li>
@@ -149,8 +151,7 @@ const Footer = () => {
                       href="/"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
-                      {" "}
-                      Privacy Policy{" "}
+                    {t("privacyPolicy")}
                     </Link>
                   </li>
                   <li>
@@ -158,8 +159,7 @@ const Footer = () => {
                       href="/"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
-                      {" "}
-                      Refund Policy{" "}
+                    {t("refundPolicy")}
                     </Link>
                   </li>
                 </ul>
@@ -169,7 +169,7 @@ const Footer = () => {
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Support & Help
+                {t("supportAndHelp")}
                 </h2>
                 <ul>
                   <li>
@@ -177,8 +177,7 @@ const Footer = () => {
                       href="/"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
-                      {" "}
-                      Open Support Ticket{" "}
+                    {t("openSupportTicket")}
                     </Link>
                   </li>
                   <li>
@@ -186,17 +185,7 @@ const Footer = () => {
                       href="/"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
-                      {" "}
-                      Terms of Use{" "}
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/"
-                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
-                    >
-                      {" "}
-                      About{" "}
+                     {t("termsOfUse")}
                     </Link>
                   </li>
                 </ul>
@@ -207,7 +196,7 @@ const Footer = () => {
         <div className="bg-primary/10 py-8">
           <div className="container">
             <div className="text-center text-base text-body-color dark:text-white">
-              Created with ❤️ by Emmanuel Alanis. © 2023   
+            {t("createdWithLove")}{currentYear}
             </div>
           </div>
         </div>

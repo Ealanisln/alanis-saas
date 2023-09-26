@@ -1,13 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import ScrollLink from "../ScrollLink";
+import { useTranslations } from "next-intl";
 
-type Props = {
-  heading: string
-  title: string
-}
-
-export default function Hero({ heading, title }: Props): JSX.Element {
+export default function Hero() {
+  const t = useTranslations("Hero");
 
   return (
     <>
@@ -23,7 +20,7 @@ export default function Hero({ heading, title }: Props): JSX.Element {
                 data-wow-delay=".2s"
               >
                 <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                  Your online presence made easy!
+                  {t("description")}
                 </h1>
                 <Image
                   src="/images/hero/alt.png"
@@ -35,23 +32,20 @@ export default function Hero({ heading, title }: Props): JSX.Element {
                 />
                 <br />
                 <div className="mb-12 text-base font-medium !leading-relaxed text-slate-50 dark:text-white dark:opacity-90 sm:text-lg md:text-xl">
-                  Are you looking to create a personal or business website, but
-                  don&apos;t know where to begin? Look no further! We can help
-                  you create a unique and affordable website that truly
-                  represents you.
+                {t("subtitle")}
                 </div>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link
                     href="#"
                     className="rounded-md bg-primary py-4 px-8 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
                   >
-                    Get started now
+                    {t("getStartedButton")}
                   </Link>
                   <ScrollLink
                     href="#pricing-container"
                     className="rounded-md bg-black/20 py-4 px-8 text-base font-semibold text-black duration-300 ease-in-out hover:bg-black/30 dark:bg-white/20 dark:text-white dark:hover:bg-white/30"
                   >
-                    View Our Plans
+                    {t("viewplans")}
                   </ScrollLink>
                 </div>
               </div>
@@ -302,4 +296,4 @@ export default function Hero({ heading, title }: Props): JSX.Element {
       </section>
     </>
   );
-};
+}

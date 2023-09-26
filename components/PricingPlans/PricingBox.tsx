@@ -1,6 +1,7 @@
 'use client'
 
 import { useCallback } from "react";
+import { useTranslations } from "next-intl";
 
 const PricingBox = (props: {
   price: number;
@@ -24,6 +25,9 @@ const PricingBox = (props: {
     }
   }, []);
 
+  const t = useTranslations("PricingPlans");
+
+
 
   return (
     <div className="w-full">
@@ -42,7 +46,7 @@ const PricingBox = (props: {
         <p className="mb-7 text-base text-body-color">{subtitle}</p>
         <div className="mb-8 border-b border-body-color border-opacity-10 pb-8 dark:border-white dark:border-opacity-10">
           <button onClick={() => purchase(price)} className="flex w-full items-center justify-center rounded-md bg-primary p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
-            Get started now
+          {t("button")}
           </button>
         </div>
         <div>{children}</div>

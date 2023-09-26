@@ -1,11 +1,23 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
-import menuData from "./menuData";
- 
+import { useTranslations } from "next-intl";
+import LocaleSwitcher from "../Common/LocaleSwitcher";
+
+export type Menu = {
+  id: number;
+  title: string;
+  path?: string;
+  newTab: boolean;
+  submenu?: Menu[];
+};
+
 const Header = () => {
+  const t = useTranslations("Navigation");
+
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarToggleHandler = () => {
@@ -25,10 +37,10 @@ const Header = () => {
     window.addEventListener("scroll", handleStickyNavbar);
   });
 
-    // Close the menu when a link is clicked
-    const handleLinkClick = () => {
-      setNavbarOpen(false);
-    };
+  // Close the menu when a link is clicked
+  const handleLinkClick = () => {
+    setNavbarOpen(false);
+  };
 
   // submenu handler
   const [openIndex, setOpenIndex] = useState(-1);
@@ -39,6 +51,39 @@ const Header = () => {
       setOpenIndex(index);
     }
   };
+
+  const menuData: Menu[] = [
+    {
+      id: 1,
+      title: t("home"),
+      path: "/",
+      newTab: false,
+    },
+    {
+      id: 3,
+      title: t("portfolio"),
+      path: "/portfolio",
+      newTab: false,
+    },
+    {
+      id: 4,
+      title: t("contact"),
+      path: "/contact",
+      newTab: false,
+    },
+    {
+      id: 5,
+      title: t("pricing"),
+      path: "/plans",
+      newTab: false,
+    },
+    {
+      id: 2,
+      title: t("about"),
+      path: "/about",
+      newTab: false,
+    },
+  ];
 
   return (
     <>
@@ -169,6 +214,9 @@ const Header = () => {
                 >
                   Sign Up
                 </Link> */}
+                <div>
+                  <LocaleSwitcher />
+                </div>
                 <div>
                   <ThemeToggler />
                 </div>

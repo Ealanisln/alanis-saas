@@ -1,6 +1,9 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const AboutSectionTwo = () => {
+  const t = useTranslations("SectionTwo"); 
+
   return (
     <section className="py-16 md:py-20 lg:py-28">
       <div className="container">
@@ -21,18 +24,18 @@ const AboutSectionTwo = () => {
             <div className="wow fadeInUp max-w-[470px]" data-wow-delay=".2s">
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Bug free code
+                  {t("title")}
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                Our bug-free code ensures optimal performance and functionality for your software applications. Trust our experienced team to deliver quality results without unexpected issues.
+                {t("description")}
                 </p>
               </div>
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  First world support
+                  {t("firstWorldSupport")}
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                Our team is here to answer questions, address concerns, and provide solutions for a seamless experience.
+                {t("firstWorldDescription")}
                 </p>
               </div>
               <div className="mb-1">
@@ -40,7 +43,7 @@ const AboutSectionTwo = () => {
                   Next.js
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                Next.js offers the best of both worlds, combining the benefits of server-side rendering with the flexibility of client-side rendering. It provides improved performance, SEO, and developer experience, making it the top choice for building modern web applications.
+                {t("descriptionNext")}
                 </p>
               </div>
             </div>

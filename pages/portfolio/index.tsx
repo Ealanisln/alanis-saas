@@ -1,12 +1,13 @@
 import SingleBlog from "@/components/Portfolio/SingleBlog";
 import blogData from "@/components/Portfolio/blogData";
 import Breadcrumb from "@/components/Common/Breadcrumb";
+import { GetStaticPropsContext } from "next";
 
 const Blog = () => {
   return (
     <>
       <Breadcrumb
-        pageName="Welcome to our portfolio"
+        pageName={"Welcome to our portfolio"}
         description="Discover my web developer portfolio gallery, showcasing captivating websites that blend creativity and technical expertise."
       />
 
@@ -29,3 +30,14 @@ const Blog = () => {
 };
 
 export default Blog;
+
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
+  return {
+    props: {
+      // You can get the messages from anywhere you like. The recommended
+      // pattern is to put them in JSON files separated by locale and read
+      // the desired one based on the `locale` received from Next.js.
+      messages: (await import(`../../locales/${locale}.json`)).default,
+    },
+  };
+}
