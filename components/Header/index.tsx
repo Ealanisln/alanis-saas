@@ -214,7 +214,7 @@ const Header = () => {
                 >
                   Sign Up
                 </Link> */}
-                <div>
+                <div className="px-2">
                   <LocaleSwitcher />
                 </div>
                 <div>

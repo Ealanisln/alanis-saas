@@ -1,8 +1,10 @@
 import SectionTitle from "../Common/SectionTitle";
 import SingleBlog from "./SingleBlog";
-import blogData from "./blogData";
+import blogData from "./blogDataOld";
+import { useTranslations } from "next-intl";
 
 const Portfolio = () => {
+  const t = useTranslations("Portfolio");
 
   return (
     <section id="blog" className="bg-primary/5 py-16 md:py-20 lg:py-28">

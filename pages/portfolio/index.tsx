@@ -1,14 +1,17 @@
 import SingleBlog from "@/components/Portfolio/SingleBlog";
-import blogData from "@/components/Portfolio/blogData";
+import blogData from "@/components/Portfolio/blogDataOld";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { GetStaticPropsContext } from "next";
+import { useTranslations } from "next-intl";
 
 const Blog = () => {
+  const t = useTranslations("Portfolio");
+
   return (
     <>
       <Breadcrumb
-        pageName={"Welcome to our portfolio"}
-        description="Discover my web developer portfolio gallery, showcasing captivating websites that blend creativity and technical expertise."
+        pageName={t("title")}
+        description={t("subtitle")}
       />
 
       <section className="pt-[120px] pb-[120px]">

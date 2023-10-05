@@ -95,7 +95,19 @@
     "termsOfUse": "Términos de Uso",
     "createdWithLove": "Creado con ❤️ por Emmanuel Alanis. ©"
   },
-  "LocaleSwitcher": {
-    "switchLocale": "Change to {locale, select, de {German} en {English} other {Unknown}}"
+  "Portfolio": {
+    "title": "Bienvenido a mi portafolio:",
+    "subtitle": "Explora la galeria de mis proyectos que combinan creatividad y experiencia técnica."
+  },
+  "BlogData": {
+    "cef": "Conducir es fácil",
+    "descriptioncef": "Este sitio fue desarrollado para ofrecer cursos de manejo, utiliza una base de datos postgreSQL y NextJS.",
+    "date": "Fecha",
+    "saas": "Alanis SaaS",
+    "descriptionSaas": "Este sitio ofrece paquetes de diseño web, integrando la API de Stripe como pasarela de pago, nodemailer para el envio de formulario de contacto y next-intl para su disponibilidad en español e inglés.",
+    "sierra": "Tienda en linea Sierra Western",
+    "descriptionSierra": "Esta es una tienda en linea que fue creada con chakraUI, completamente responsive y como backend medusa.",
+    "pokedex": "Pokedex",
+    "descriptionpoke": "Es una demo de data fetch donde todos los elementos son obtenidos a traves de una API, es completamente responsive y esta basada en NextJS."
   }
 }

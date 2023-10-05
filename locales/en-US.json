@@ -99,7 +99,18 @@
     "switchLocale": "Change to {locale, select, de {German} en {English} other {Unknown}}"
   },
   "Portfolio": {
-    "welcome": "Welcome to my portfolio",
-    "subtitle": "Discover my web developer portfolio gallery, showcasing captivating websites that blend creativity and technical expertise."
-  }
+    "title": "Welcome to my portfolio:",
+    "subtitle": "Explore the gallery of my projects that combine creativity and technical expertise."
+  },
+  "BlogData": {
+    "cef": "Drive it's easy",
+    "descriptioncef": "This website was developed to offer driving courses, it uses a PostgreSQL database and Next.js.",
+    "date": "Date",
+    "saas": "Alanis SaaS",
+    "descriptionSaas": "This website offers web design packages, integrating the Stripe API as a payment gateway, Nodemailer for contact form submissions, and next-intl for availability in both Spanish and English.",
+    "sierra": "Sierra Western Store",
+    "descriptionSierra": "This is an online store created with Chakra UI, fully responsive, and powered by Medusa as the backend.",
+    "pokedex": "Pokedex",
+    "descriptionpoke": "It's a data fetch demo where all elements are obtained through an API, it's fully responsive, and it's based on Next.js."
+  }  
 }
