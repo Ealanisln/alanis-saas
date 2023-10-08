@@ -1,6 +1,7 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import Contact, { FormProps } from "@/components/Contact";
 import { GetStaticPropsContext } from "next";
+import { useTranslations } from "next-intl";
 
 const ContactPage = () => {
   const formProps: FormProps = {
@@ -9,12 +10,14 @@ const ContactPage = () => {
     callTime: [],
     loading: false
   };
+  const t = useTranslations("Contact");
+
 
   return (
     <>
       <Breadcrumb
-        pageName="Contact Page"
-        description="Get in touch with us - we'd love to hear from you!."
+        pageName={t("title")}
+        description={t("subtitle")}
       />
 
       <Contact {...formProps} />

@@ -97,7 +97,9 @@
   },
   "Portfolio": {
     "title": "Bienvenido a mi portafolio:",
-    "subtitle": "Explora la galeria de mis proyectos que combinan creatividad y experiencia técnica."
+    "subtitle": "Explora la galeria de mis proyectos que combinan creatividad y experiencia técnica.",
+    "latest": "Mis últimos proyectos:",
+    "sublatest": "Descubre el poder de NextJS con mis proyectos más recientes, donde la tecnología de vanguardia y las impresionantes experiencias de usuario se fusionan de manera perfecta."
   },
   "BlogData": {
     "cef": "Conducir es fácil",
@@ -109,5 +111,18 @@
     "descriptionSierra": "Esta es una tienda en linea que fue creada con chakraUI, completamente responsive y como backend medusa.",
     "pokedex": "Pokedex",
     "descriptionpoke": "Es una demo de data fetch donde todos los elementos son obtenidos a traves de una API, es completamente responsive y esta basada en NextJS."
+  },
+  "Contact": {
+    "title": "Página de contacto",
+    "subtitle": "Ponte en contacto. ¡Me encantaría saber de ti!",
+    "formtitle": "¿Tienes alguna duda? Por favor escribeme.",
+    "formsubtitle": "Te responderé en cuanto me sea posible.",
+    "name": "Nombre",
+    "subname": "Escribe tu nombre",
+    "email": "Correo electrónico",
+    "subemail": "Escribe tu dirección de correo.",
+    "message": "Mensaje",
+    "submessage": "Hasta 1000 caracteres.",
+    "send": "Enviar"
   }
 }

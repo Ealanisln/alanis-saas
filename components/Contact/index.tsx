@@ -1,7 +1,8 @@
 "use client";
 
 import React, { ChangeEvent, FormEvent, useRef, useState } from "react";
-import toast, { Toaster } from 'react-hot-toast';
+import toast, { Toaster } from "react-hot-toast";
+import { useTranslations } from "next-intl";
 
 export interface FormProps {
   result: boolean;
@@ -16,7 +17,7 @@ const Form: React.FC<FormProps> = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
-  const notify = () => toast('Here is your toast.');
+  const t = useTranslations("Contact");
 
   async function sendEmail(event: FormEvent) {
     event.preventDefault();
@@ -70,7 +71,11 @@ const Form: React.FC<FormProps> = () => {
 
   return (
     <>
-      <section key="contact-1" id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
+      <section
+        key="contact-1"
+        id="contact"
+        className="overflow-hidden py-16 md:py-20 lg:py-28"
+      >
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
@@ -79,10 +84,10 @@ const Form: React.FC<FormProps> = () => {
                 data-wow-delay=".15s"
               >
                 <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
-                  Any question? Please contact us!
+                  {t("formtitle")}
                 </h2>
                 <div className="mb-12 text-base font-medium text-body-color">
-                  Our support team will get back to you ASAP via email.
+                  {t("formsubtitle")}
                 </div>
                 <form onSubmit={sendEmail}>
                   <div className="-mx-4 flex flex-wrap">
@@ -92,12 +97,12 @@ const Form: React.FC<FormProps> = () => {
                           htmlFor="name"
                           className="mb-3 block text-sm font-medium text-dark dark:text-white"
                         >
-                          Name
+                          {t("name")}
                         </label>
                         <input
                           type="text"
                           name="name"
-                          placeholder="Enter your name"
+                          placeholder={t("subname")}
                           required
                           className="w-full rounded-md border border-transparent py-3 px-6 text-base text-slate-600 placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
                           value={name}
@@ -110,11 +115,11 @@ const Form: React.FC<FormProps> = () => {
                     <div className="w-full px-4 md:w-1/2">
                       <div className="mb-8">
                         <label className="mb-3 block text-sm font-medium text-dark dark:text-white">
-                          Email
+                          {t("email")}
                         </label>
                         <input
                           type="email"
-                          placeholder="Enter your e-mail address"
+                          placeholder={t("subemail")}
                           name="email"
                           className="w-full rounded-md border border-transparent py-3 px-6 text-base text-slate-600 placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
                           pattern=".+@.+\..+"
@@ -128,7 +133,8 @@ const Form: React.FC<FormProps> = () => {
                     <div className="w-full px-4">
                       <div className="mb-8">
                         <label>
-                          Message<span className="">*</span>
+                          {t("message")}
+                          <span className="">*</span>
                         </label>
                         <textarea
                           name="message"
@@ -136,21 +142,23 @@ const Form: React.FC<FormProps> = () => {
                           required
                           value={message}
                           maxLength={1000}
-                          placeholder="Up to 1000 characters."
+                          placeholder={t("submessage")}
                           className="w-full resize-none rounded-md border border-transparent py-3 px-6 text-base text-slate-800 placeholder-body-color shadow-one outline-none focus:border-primary focus-visible:shadow-none dark:bg-[#242B51] dark:shadow-signUp"
                           onChange={({ target }: ChangeEvent) =>
                             setMessage((target as HTMLInputElement).value)
                           }
                         ></textarea>
-                        </div>
-                        </div>
-                        <div className="w-full px-4">
-
-                        <input className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp" type="submit" value="Send" />
-                        <div>
-                        </div>
                       </div>
                     </div>
+                    <div className="w-full px-4">
+                      <input
+                        className="rounded-md bg-primary py-4 px-9 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp"
+                        type="submit"
+                        value={t("send")}
+                      />
+                      <div></div>
+                    </div>
+                  </div>
                 </form>
               </div>
             </div>

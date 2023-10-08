@@ -1,30 +1,24 @@
 import SingleBlog from "@/components/Portfolio/SingleBlog";
-import blogData from "@/components/Portfolio/blogDataOld";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { GetStaticPropsContext } from "next";
 import { useTranslations } from "next-intl";
+import SectionTitle from "@/components/Common/SectionTitle";
 
 const Blog = () => {
   const t = useTranslations("Portfolio");
 
   return (
     <>
-      <Breadcrumb
-        pageName={t("title")}
-        description={t("subtitle")}
-      />
-
-      <section className="pt-[120px] pb-[120px]">
+      <Breadcrumb pageName={t("title")} description={t("subtitle")} />
+      <section id="blog" className="bg-primary/5 py-16 md:py-20 lg:py-28">
         <div className="container">
-          <div className="-mx-4 flex flex-wrap justify-center">
-            {blogData.map((blog) => (
-              <div
-                key={blog.id}
-                className="w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3"
-              >
-                <SingleBlog blog={blog} />
-              </div>
-            ))}
+          <SectionTitle
+            title={t("latest")}
+            paragraph={t("sublatest")}
+            center
+          />
+          <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 md:gap-x-6 lg:gap-x-8 xl:grid-cols-3">
+            <SingleBlog />
           </div>
         </div>
       </section>

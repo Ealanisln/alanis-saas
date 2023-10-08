@@ -100,7 +100,9 @@
   },
   "Portfolio": {
     "title": "Welcome to my portfolio:",
-    "subtitle": "Explore the gallery of my projects that combine creativity and technical expertise."
+    "subtitle": "Explore the gallery of my projects that combine creativity and technical expertise.",
+    "latest": "My latest projects:",
+    "sublatest": "Discover the power of NextJS with my latest projects, where cutting-edge technology and stunning user experiences merge seamlessly."
   },
   "BlogData": {
     "cef": "Drive it's easy",
@@ -112,5 +114,18 @@
     "descriptionSierra": "This is an online store created with Chakra UI, fully responsive, and powered by Medusa as the backend.",
     "pokedex": "Pokedex",
     "descriptionpoke": "It's a data fetch demo where all elements are obtained through an API, it's fully responsive, and it's based on Next.js."
-  }  
+  },
+  "Contact": {
+    "title": "Contact Page",
+    "subtitle": "Get in touch with me. I would love to hear from you!",
+    "formtitle": "Do you have any questions? Please write to me.",
+    "formsubtitle": "I will respond as soon as possible.",
+    "name": "Name",
+    "subname": "Enter your name",
+    "email": "Email",
+    "subemail": "Enter your email address",
+    "message": "Message",
+    "submessage": "Up to 1000 characters",
+    "send": "Send"
+    }
 }
