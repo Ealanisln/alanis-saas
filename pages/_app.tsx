@@ -10,7 +10,21 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 
   return (
     <>
-      <NextIntlClientProvider messages={pageProps.messages}>
+      <NextIntlClientProvider
+        messages={pageProps.messages}
+        onError={(error) => {
+          if (error.code === "MISSING_MESSAGE") {
+            // Handle the missing message error here
+            console.error(`Missing message for key: ${error.message}`);
+            // You can provide a default message or perform some other action
+            // For example, you could set a default message in the UI.
+            // Or you could send an error report to your server for further analysis.
+          } else {
+            // Handle other types of errors here
+            console.error("An error occurred:", error);
+          }
+        }}
+      >
         <Head>
           <meta
             name="viewport"
