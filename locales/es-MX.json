@@ -124,5 +124,9 @@
     "message": "Mensaje",
     "submessage": "Hasta 1000 caracteres.",
     "send": "Enviar"
+  },
+  "About": {
+    "title": "Acerca de mí",
+    "description": "👋 ¡Hola! Soy un desarrollador web 🇲🇽 mexicano que actualmente vive en 🌁 California. Tengo una pasión por crear grandes experiencias en la web 🌎 y estoy constantemente aprendiendo algo nuevo. Además, disfruto ayudar a otros a crecer y desarrollarse junto a mí. 👨🏽‍💻"
   }
 }

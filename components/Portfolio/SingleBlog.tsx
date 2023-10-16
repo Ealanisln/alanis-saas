@@ -90,7 +90,12 @@ const SingleBlog = () => {
               <span className="absolute top-6 right-6 z-20 inline-flex items-center justify-center rounded-full bg-primary py-2 px-4 text-sm font-semibold capitalize text-white">
                 {blogItem.tags[0]}
               </span>
-              <Image src={blogItem.image} alt="image" fill />
+              <Image
+                src={blogItem.image}
+                alt="image"
+                fill
+                className="w-full h-full top-0 left-0 object-cover rounded-2xl"
+              />
             </Link>
             <div className="p-6 sm:p-8 md:py-8 md:px-6 lg:p-8 xl:py-8 xl:px-5 2xl:p-8">
               <h3 className="mb-4 block text-xl font-bold text-black hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl">
