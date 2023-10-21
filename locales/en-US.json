@@ -105,6 +105,8 @@
     "sublatest": "Discover the power of NextJS with my latest projects, where cutting-edge technology and stunning user experiences merge seamlessly."
   },
   "BlogData": {
+    "catwiki": "Cat Wiki",
+    "catdescription": "It's a project where I used NextJS to fetch data from thecatapi.com using server components and static site generation.",
     "cef": "Drive it's easy",
     "descriptioncef": "This website was developed to offer driving courses, it uses a PostgreSQL database and Next.js.",
     "date": "Date",

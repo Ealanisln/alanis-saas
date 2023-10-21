@@ -25,7 +25,20 @@ const SingleBlog = () => {
 
   const blogData: Blog[] = [
     {
-      id: 1,
+      id: 5,
+      title: t("catwiki"),
+      paragraph: t("catdescription"),
+      image: "/images/blog/blog-05.webp",
+      location: {
+        url: "https://cat-wiki-alanis.vercel.app/",
+        image: "/images/blog/yo.jpg",
+        designation: "NextJS, API, Tailwind CSS.",
+      },
+      tags: ["Static Site Generation"],
+      publishDate: "2023",
+    },
+    {
+      id: 4,
       title: t("cef"),
       paragraph: t("descriptioncef"),
       image: "/images/blog/blog-01.webp",
@@ -38,7 +51,7 @@ const SingleBlog = () => {
       publishDate: "2023",
     },
     {
-      id: 2,
+      id: 3,
       title: t("saas"),
       paragraph: t("descriptionSaas"),
       image: "/images/blog/blog-04.webp",
@@ -51,7 +64,7 @@ const SingleBlog = () => {
       publishDate: "2023",
     },
     {
-      id: 3,
+      id: 2,
       title: t("sierra"),
       paragraph: t("descriptionSierra"),
       image: "/images/blog/blog-03.webp",
@@ -64,7 +77,7 @@ const SingleBlog = () => {
       publishDate: "2023",
     },
     {
-      id: 4,
+      id: 1,
       title: t("pokedex"),
       paragraph: t("descriptionpoke"),
       image: "/images/blog/blog-02.webp",
