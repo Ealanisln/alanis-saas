@@ -25,6 +25,19 @@ const SingleBlog = () => {
 
   const blogData: Blog[] = [
     {
+      id: 6,
+      title: t("charlapdf"),
+      paragraph: t("charladescription"),
+      image: "/images/blog/blog-06.webp",
+      location: {
+        url: "https://www.charlapdf.pro",
+        image: "/images/blog/yo.jpg",
+        designation: "NextJS, OpenAI, postgreSQL",
+      },
+      tags: ["AI API"],
+      publishDate: "2023",
+    },
+    {
       id: 5,
       title: t("catwiki"),
       paragraph: t("catdescription"),
@@ -90,6 +103,9 @@ const SingleBlog = () => {
       publishDate: "2023",
     },
   ];
+
+
+ 
 
   return (
     <>
