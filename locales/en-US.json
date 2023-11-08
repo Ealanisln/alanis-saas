@@ -58,15 +58,15 @@
     "title": "Choose the Perfect Plan for Your Needs",
     "subtitle": "Our three-tiered pricing model offers options for everyone, whether you're a small business owner or a power user.",
     "lite": {
-      "title": "$389 Lite",
+      "title": "Lite",
       "description": "Suitable for small businesses or individuals on a budget."
     },
     "basic": {
-      "title": "$600 Basic",
+      "title": "Basic",
       "description": "Designed for those who need a little more functionality but still want to keep costs down."
     },
     "plus": {
-      "title": "$800 Plus",
+      "title": "Plus",
       "description": "The highest level of service and capabilities, designed for power users."
     },
     "specs": {
@@ -78,7 +78,7 @@
       "staticbasic": "11 - 50 static pages.",
       "staticplus": "50 - 100 static pages."
     },
-    "note": "Note: These packages do not include hosting and domain costs. Please contact us if you would like to receive personalized service tailored to your specific needs."
+    "note": "Note: These costs include hosting and domain service for one year."
   },
   "Footer": {
     "simplifyingWeb": "Simplifying the web just for you.",

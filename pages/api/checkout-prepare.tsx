@@ -27,7 +27,6 @@ export default async function handler(
 
   try {
     const baseUrl = getBaseUrl(req);
-    console.log(baseUrl);
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       line_items: [

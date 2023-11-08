@@ -58,7 +58,7 @@
     "title": "Elige el Plan Perfecto para tus Necesidades",
     "subtitle": "Nuestro modelo de precios de tres niveles ofrece opciones para todos, ya sea que seas propietario de una pequeña empresa o un usuario avanzado.",
     "lite": {
-      "title": "$389 Lite",
+      "title": "Lite",
       "description": "Adecuado para pequeñas empresas o individuos con un presupuesto limitado."
     },
     "basic": {
@@ -78,7 +78,7 @@
       "staticbasic": "11 - 50 páginas estáticas.",
       "staticplus": "50 - 100 páginas estáticas."
     },
-    "note": "Nota: Estos paquetes no incluyen costos de alojamiento y dominio. Por favor, contáctanos para recibir un servicio personalizado adaptado a tus necesidades específicas."
+    "note": "Nota: Estos costos incluyen el servicio de hosting y dominio por un año."
   },
   "Footer": {
     "simplifyingWeb": "Simplificando la web solo para ti.",
