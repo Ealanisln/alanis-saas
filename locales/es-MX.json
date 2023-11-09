@@ -132,5 +132,17 @@
   "About": {
     "title": "Acerca de mí",
     "description": "👋 ¡Hola! Soy un desarrollador web 🇲🇽 mexicano que actualmente vive en 🌁 California. Tengo una pasión por crear grandes experiencias en la web 🌎 y estoy constantemente aprendiendo algo nuevo. Además, disfruto ayudar a otros a crecer y desarrollarse junto a mí. 👨🏽‍💻"
+  },
+  "Cancel": {
+    "title": "El pago fue cancelado.",
+    "paragraph": "Ningún cargo ha sido realizado.",
+    "back": "Ir a página de inicio."
+  },
+  "Success": {
+      "title": "Tú pago ha sido confirmado. ✅",
+      "paragraph": "Gracias por tu compra. Nos sentimos honrados de tenerte como cliente y esperamos servirte durante mucho tiempo. Estos son los próximos pasos:",
+      "first": "Nos pondremos en contacto contigo en 24 horas o menos.",
+      "second": "Te proporcionaremos un tiempo estimado para entregar tu diseño y programar la primera revisión.",
+      "third": "Te proporcionaremos la URL donde podrás ver la versión de producción."
   }
 }

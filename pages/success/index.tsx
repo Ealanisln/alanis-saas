@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useRouter } from "next/router"; // Import the useRouter hook
 import Axios from "axios";
 import { GetStaticPropsContext } from "next";
+import { useTranslations } from "next-intl";
 
 interface SessionData {
   metadata: {
@@ -35,6 +36,9 @@ const List = ({ text }) => (
 );
 
 const Success = () => {
+  const t = useTranslations("Success");
+  const translatedParagraph = t("paragraph");
+
   const [customerName, setCustomerName] = useState("");
   const [isSessionFetching, setSessionFetching] = useState(false);
   const [sessionData, setSessionData] = useState<SessionData | null>(null); // Use null as initial state
@@ -79,8 +83,8 @@ const Success = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2 py-8">
               <SectionTitle
-                title="Purchase was confirmed."
-                paragraph={`Hi, ${customerName}. Thank you for your recent purchase. We are honored to gain you as a customer and hope to serve you for a long time. These are the next steps:`}
+                title={t("title")}
+                paragraph={`Hi, ${customerName}. ${t("paragraph")}`}
                 mb="44px"
               />
 
@@ -90,9 +94,9 @@ const Success = () => {
               >
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="We will contact you." />
-                    <List text="We provide an estimated time to deliver your design." />
-                    <List text="We upload it to the hosting to make it live." />
+                    <List text={t("first")} />
+                    <List text={t("second")} />
+                    <List text={t("third")} />
                   </div>
 
                   {/* <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">

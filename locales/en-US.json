@@ -135,5 +135,17 @@
     "About": {
       "title": "About me",
       "description": "👋 Hi there! I'm a 🇲🇽 Mexican web developer who is currently living in 🌁 California. I have a passion for creating impactful experiences on the web 🌎, and I'm constantly learning something new. Additionally, I enjoy helping others to grow and develop alongside me. 👨🏽‍💻"
+    },
+    "Cancel": {
+      "title": "Payment was cancelled",
+      "paragraph": "You have not been charged!",
+      "back": "Back to HomePage"
+    },
+    "Success": {
+      "title": "Purchase was confirmed. ✅",
+      "paragraph": "Thank you for your recent purchase. We are honored to gain you as a customer and hope to serve you for a long time. These are the next steps:",
+      "first": "We will contact you in 24 hours or less.",
+      "second": "We will provide an estimated time to deliver your design and schedule the first revision.",
+      "third": "We will provide the URL where you can view the production version."
     }
 }

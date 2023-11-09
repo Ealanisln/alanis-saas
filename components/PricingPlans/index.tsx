@@ -66,7 +66,7 @@ const PricingPlans = () => {
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
             packageName="Lite"
-            price={250}
+            price={299}
             subtitle={t("lite.description")}
           >
             <OfferList text={t("specs.hosting")} status="active" />
@@ -77,7 +77,7 @@ const PricingPlans = () => {
           </PricingBox>
           <PricingBox
             packageName={t("basic.title")}
-            price={600}
+            price={499}
             subtitle={t("basic.description")}
           >
             <OfferList text={t("specs.hosting")} status="active" />
