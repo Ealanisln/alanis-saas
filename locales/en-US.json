@@ -116,8 +116,8 @@
     "descriptionSaas": "This website offers web design packages, integrating the Stripe API as a payment gateway, Nodemailer for contact form submissions, and next-intl for availability in both Spanish and English.",
     "sierra": "Sierra Western Store",
     "descriptionSierra": "This is an online store created with Chakra UI, fully responsive, and powered by Medusa as the backend.",
-    "pokedex": "Pokedex",
-    "descriptionpoke": "It's a data fetch demo where all elements are obtained through an API, it's fully responsive, and it's based on Next.js."
+    "familyvet": "Family Vet",
+    "descriptionvet": "This static page was created for a veterinary clinic where various services are offered. I used Next.js, Tailwind for the design, and Sanity for blog management."
   },
   "Contact": {
     "title": "Contact Page",
