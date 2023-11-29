@@ -1,0 +1,27 @@
+import Link from "next/link";
+import type { SanityDocument } from "@sanity/client";
+import Head from "next/head";
+
+export default function Posts({ posts = [] }: { posts: SanityDocument[] }) {
+  const title = posts.length === 1 ? `1 Post` : `${posts.length} Posts`;
+
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+      </Head>
+      <main className="divide-blue-100 container mx-auto grid grid-cols-1 divide-y">
+        <h1 className="p-4 text-2xl font-bold">{title}</h1>
+        {posts.map((post) => (
+          <Link
+            key={post._id}
+            href={`/blog/${post.slug.current}`}
+            className="hover:bg-blue-50 p-4"
+          >
+            <h2>{post.title}</h2>
+          </Link>
+        ))}
+      </main>
+    </>
+  );
+}
