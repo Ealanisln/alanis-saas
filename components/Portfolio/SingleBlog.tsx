@@ -95,11 +95,11 @@ const SingleBlog = () => {
       paragraph: t("descriptionvet"),
       image: "/images/blog/blog-02.webp",
       location: {
-        url: "https://vet-family-23.vercel.app/",
+        url: "https://www.vetforfamily.com",
         image: "/images/blog/yo.jpg",
         designation: "NextJS",
       },
-      tags: ["Web app"],
+      tags: ["Static website"],
       publishDate: "2023",
     },
   ];
