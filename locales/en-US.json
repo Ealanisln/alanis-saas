@@ -115,7 +115,7 @@
     "saas": "Alanis SaaS",
     "descriptionSaas": "This website offers web design packages, integrating the Stripe API as a payment gateway, Nodemailer for contact form submissions, and next-intl for availability in both Spanish and English.",
     "sierra": "Sierra Western Store",
-    "descriptionSierra": "This is an online store created with Chakra UI, fully responsive, and powered by Medusa as the backend.",
+    "descriptionSierra": "This is an online store created with NextJS 14, next-auth, prisma as database connector to a postgreSQL database. Paypal as payment gateway and zustand as state management solution.",
     "familyvet": "Family Vet",
     "descriptionvet": "This static page was created for a veterinary clinic where various services are offered. I used Next.js, Tailwind for the design, and Sanity for blog management."
   },

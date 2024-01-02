@@ -82,9 +82,9 @@ const SingleBlog = () => {
       paragraph: t("descriptionSierra"),
       image: "/images/blog/blog-03.webp",
       location: {
-        url: "https://sierrra-western-store-git-navbar-ealanisln.vercel.app/",
+        url: "https://sierra-western.vercel.app/",
         image: "/images/blog/yo.jpg",
-        designation: "NextJS, Tailwind, Supabase",
+        designation: "NextJS, Next-auth, Prisma, Paypal",
       },
       tags: ["E-commerce"],
       publishDate: "2023",

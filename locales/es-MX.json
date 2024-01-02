@@ -112,7 +112,7 @@
     "saas": "Alanis SaaS",
     "descriptionSaas": "Este sitio ofrece paquetes de diseño web, integrando la API de Stripe como pasarela de pago, nodemailer para el envio de formulario de contacto y next-intl para su disponibilidad en español e inglés.",
     "sierra": "Tienda en linea Sierra Western",
-    "descriptionSierra": "Esta es una tienda en linea que fue creada con chakraUI, completamente responsive y como backend medusa.",
+    "descriptionSierra": "Esta es una tienda en línea creada con NextJS 14, next-auth, Prisma como conector de base de datos a una base de datos PostgreSQL. Paypal como pasarela de pago y Zustand como solución de gestión de estado.",
     "familyvet": "Family Vet",
     "descriptionvet": "Esta página estática fue creada para una veterinaria donde se ofrecen varios servicios. Utilicé Next JS, Tailwind para el diseño y Sanity para la gestión del blog."
   },
